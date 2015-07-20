@@ -49,12 +49,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         let row = indexPath.row
         let entry = data.places[row]
-        cell.textLabel.text =  entry.Name
+        cell.textLabel!.text =  entry.Name
         cell.backgroundColor = UIColor.clearColor()
         cell.backgroundView?.alpha = 0.5
-       cell.textLabel.textColor=UIColor.blackColor()
+       cell.textLabel!.textColor=UIColor.blackColor()
         let image = UIImage(named: entry.Icon)
-        cell.imageView.image = image
+        cell.imageView!.image = image
         
         return cell
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2aW-3Y-AmM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2aW-3Y-AmM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="b1.png" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-Xa-She">
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="b1.png" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-Xa-She">
                                 <rect key="frame" x="0.0" y="16" width="600" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -385,15 +385,48 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0t-pp-jii" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="1Bl-fs-KEn"/>
+                                    <constraint firstAttribute="height" constant="50" id="4Q9-09-YTu"/>
+                                    <constraint firstAttribute="height" constant="50" id="IJw-aK-L1H"/>
+                                    <constraint firstAttribute="width" constant="728" id="lbM-8o-BWG"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IJw-aK-L1H"/>
+                                        <exclude reference="lbM-8o-BWG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="1Bl-fs-KEn"/>
+                                        <exclude reference="4Q9-09-YTu"/>
+                                        <include reference="IJw-aK-L1H"/>
+                                        <include reference="lbM-8o-BWG"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qj4-K4-ouD" firstAttribute="top" secondItem="t0t-pp-jii" secondAttribute="bottom" id="5FU-TL-1Du"/>
                             <constraint firstItem="qj4-K4-ouD" firstAttribute="top" secondItem="rXv-tj-NLN" secondAttribute="bottom" id="6Rk-DF-STb"/>
+                            <constraint firstAttribute="centerX" secondItem="t0t-pp-jii" secondAttribute="centerX" id="9ZF-1k-36C"/>
+                            <constraint firstAttribute="centerX" secondItem="t0t-pp-jii" secondAttribute="centerX" id="Edh-dl-la4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t0t-pp-jii" secondAttribute="trailing" constant="-16" id="HmF-mp-LI0"/>
+                            <constraint firstItem="t0t-pp-jii" firstAttribute="leading" secondItem="Vfi-nm-hqZ" secondAttribute="leadingMargin" constant="-16" id="KRe-Xr-pdE"/>
+                            <constraint firstAttribute="centerX" secondItem="t0t-pp-jii" secondAttribute="centerX" id="Mux-yG-xMt"/>
                             <constraint firstItem="rXv-tj-NLN" firstAttribute="leading" secondItem="Vfi-nm-hqZ" secondAttribute="leadingMargin" constant="-6" id="NMD-56-QwU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t0t-pp-jii" secondAttribute="trailing" id="Nk3-Tf-TnT"/>
                             <constraint firstItem="qj4-K4-ouD" firstAttribute="top" secondItem="rXv-tj-NLN" secondAttribute="bottom" id="WMg-w0-rxD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rXv-tj-NLN" secondAttribute="trailing" constant="-6" id="Z9U-D7-0Zv"/>
                             <constraint firstItem="qj4-K4-ouD" firstAttribute="top" secondItem="rXv-tj-NLN" secondAttribute="bottom" id="g2h-dZ-ZeY"/>
+                            <constraint firstItem="qj4-K4-ouD" firstAttribute="top" secondItem="t0t-pp-jii" secondAttribute="bottom" id="gbq-5L-Dwl"/>
                             <constraint firstItem="rXv-tj-NLN" firstAttribute="top" secondItem="Vfi-nm-hqZ" secondAttribute="topMargin" id="kCE-qu-IoW"/>
+                            <constraint firstItem="t0t-pp-jii" firstAttribute="leading" secondItem="Vfi-nm-hqZ" secondAttribute="leadingMargin" constant="-16" id="mJx-0L-xJO"/>
                             <constraint firstItem="rXv-tj-NLN" firstAttribute="trailing" secondItem="Vfi-nm-hqZ" secondAttribute="trailingMargin" id="rjc-tc-pXS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rXv-tj-NLN" secondAttribute="trailing" constant="-16" id="skD-IW-EAx"/>
                             <constraint firstItem="rXv-tj-NLN" firstAttribute="leading" secondItem="Vfi-nm-hqZ" secondAttribute="leadingMargin" constant="-16" id="uNa-Zn-xhB"/>
@@ -409,6 +442,11 @@
                                 <exclude reference="rjc-tc-pXS"/>
                                 <exclude reference="yCi-Se-gtu"/>
                                 <exclude reference="ytg-wL-QUE"/>
+                                <exclude reference="Edh-dl-la4"/>
+                                <exclude reference="KRe-Xr-pdE"/>
+                                <exclude reference="Mux-yG-xMt"/>
+                                <exclude reference="Nk3-Tf-TnT"/>
+                                <exclude reference="5FU-TL-1Du"/>
                                 <exclude reference="WMg-w0-rxD"/>
                                 <exclude reference="g2h-dZ-ZeY"/>
                             </mask>
@@ -429,6 +467,9 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="t0t-pp-jii"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="rjc-tc-pXS"/>
                                 <exclude reference="skD-IW-EAx"/>
@@ -436,13 +477,22 @@
                                 <include reference="yCi-Se-gtu"/>
                                 <include reference="ytg-wL-QUE"/>
                                 <exclude reference="zne-od-R7O"/>
+                                <include reference="Edh-dl-la4"/>
+                                <exclude reference="HmF-mp-LI0"/>
+                                <include reference="KRe-Xr-pdE"/>
+                                <include reference="Mux-yG-xMt"/>
+                                <include reference="Nk3-Tf-TnT"/>
+                                <exclude reference="mJx-0L-xJO"/>
+                                <include reference="5FU-TL-1Du"/>
                                 <exclude reference="6Rk-DF-STb"/>
                                 <include reference="WMg-w0-rxD"/>
+                                <exclude reference="gbq-5L-Dwl"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="web title" id="u7x-fT-6QY"/>
                     <connections>
+                        <outlet property="admobBanner" destination="t0t-pp-jii" id="Z0V-2q-e5U"/>
                         <outlet property="webView1" destination="rXv-tj-NLN" id="6Zi-S6-K30"/>
                     </connections>
                 </viewController>
