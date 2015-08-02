@@ -23,55 +23,6 @@
                                 <rect key="frame" x="0.0" y="16" width="600" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmQ-xP-gh9" userLabel="adView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="272-1R-meC">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
-                                        <state key="normal" title="Thanks for using my app">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddh-m7-yFo">
-                                        <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="56" id="L73-II-Wf1"/>
-                                            <constraint firstAttribute="height" constant="40" id="p3h-Dq-K9A"/>
-                                        </constraints>
-                                        <state key="normal" title="Info">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="86" y="-98" width="56" height="40"/>
-                                        </variation>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2051887117" green="0.71164457729999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="272-1R-meC" secondAttribute="trailing" id="WG9-5j-mHe"/>
-                                    <constraint firstAttribute="bottom" secondItem="272-1R-meC" secondAttribute="bottom" id="hRq-XG-17M"/>
-                                    <constraint firstItem="272-1R-meC" firstAttribute="leading" secondItem="fmQ-xP-gh9" secondAttribute="leading" id="oXL-9z-T8k"/>
-                                    <constraint firstItem="272-1R-meC" firstAttribute="top" secondItem="fmQ-xP-gh9" secondAttribute="top" id="zT5-YX-LjE"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="WG9-5j-mHe"/>
-                                        <exclude reference="hRq-XG-17M"/>
-                                        <exclude reference="oXL-9z-T8k"/>
-                                        <exclude reference="zT5-YX-LjE"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="WG9-5j-mHe"/>
-                                        <include reference="hRq-XG-17M"/>
-                                        <include reference="oXL-9z-T8k"/>
-                                        <include reference="zT5-YX-LjE"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1o-ZA-fyj" userLabel="MainView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -148,6 +99,65 @@
                                         <include reference="LoY-ca-MFK"/>
                                         <include reference="RGU-3m-eD3"/>
                                         <include reference="Yh6-Hy-cfD"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmQ-xP-gh9" userLabel="adView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="272-1R-meC">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <state key="normal" title="Thanks for using my app">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ShowAdClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrZ-oE-IK2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddh-m7-yFo">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="L73-II-Wf1"/>
+                                            <constraint firstAttribute="height" constant="40" id="p3h-Dq-K9A"/>
+                                        </constraints>
+                                        <state key="normal" title="Ad Status">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="-2" y="0.0" width="110" height="40"/>
+                                            <mask key="constraints">
+                                                <exclude reference="L73-II-Wf1"/>
+                                                <exclude reference="p3h-Dq-K9A"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="InfoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2A5-u0-JVB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2051887117" green="0.71164457729999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="272-1R-meC" secondAttribute="trailing" id="WG9-5j-mHe"/>
+                                    <constraint firstAttribute="bottom" secondItem="272-1R-meC" secondAttribute="bottom" id="hRq-XG-17M"/>
+                                    <constraint firstItem="272-1R-meC" firstAttribute="leading" secondItem="fmQ-xP-gh9" secondAttribute="leading" id="oXL-9z-T8k"/>
+                                    <constraint firstItem="272-1R-meC" firstAttribute="top" secondItem="fmQ-xP-gh9" secondAttribute="top" id="zT5-YX-LjE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WG9-5j-mHe"/>
+                                        <exclude reference="hRq-XG-17M"/>
+                                        <exclude reference="oXL-9z-T8k"/>
+                                        <exclude reference="zT5-YX-LjE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="WG9-5j-mHe"/>
+                                        <include reference="hRq-XG-17M"/>
+                                        <include reference="oXL-9z-T8k"/>
+                                        <include reference="zT5-YX-LjE"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -253,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856" y="90"/>
+            <point key="canvasLocation" x="855" y="90"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="3Ny-9o-MhS">

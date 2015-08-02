@@ -42,6 +42,13 @@
 		84EE74BF1B6E09840030FAD9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EE74BE1B6E09840030FAD9 /* CoreData.framework */; };
 		84EE74C21B6E09950030FAD9 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EE74C01B6E09950030FAD9 /* EventKit.framework */; };
 		84EE74C31B6E09950030FAD9 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EE74C11B6E09950030FAD9 /* EventKitUI.framework */; };
+		84EE74CD1B6E35BD0030FAD9 /* __vungle.db in Resources */ = {isa = PBXBuildFile; fileRef = 84EE74C61B6E35BD0030FAD9 /* __vungle.db */; };
+		84EE74CE1B6E35BD0030FAD9 /* vg_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EE74C71B6E35BD0030FAD9 /* vg_close.png */; };
+		84EE74CF1B6E35BD0030FAD9 /* vg_cta.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EE74C81B6E35BD0030FAD9 /* vg_cta.png */; };
+		84EE74D01B6E35BD0030FAD9 /* vg_mute_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EE74C91B6E35BD0030FAD9 /* vg_mute_off.png */; };
+		84EE74D11B6E35BD0030FAD9 /* vg_mute_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EE74CA1B6E35BD0030FAD9 /* vg_mute_on.png */; };
+		84EE74D21B6E35BD0030FAD9 /* vg_privacy.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EE74CB1B6E35BD0030FAD9 /* vg_privacy.png */; };
+		84EE74D31B6E35BD0030FAD9 /* VungleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EE74CC1B6E35BD0030FAD9 /* VungleSDK.framework */; };
 		960FF70E1B3B981F0054CE79 /* b1.png in Resources */ = {isa = PBXBuildFile; fileRef = 960FF70D1B3B981F0054CE79 /* b1.png */; };
 		965895A01B21971A00D854FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658959F1B21971A00D854FF /* AppDelegate.swift */; };
 		965895A21B21971A00D854FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895A11B21971A00D854FF /* ViewController.swift */; };
@@ -152,6 +159,13 @@
 		84EE74BE1B6E09840030FAD9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84EE74C01B6E09950030FAD9 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		84EE74C11B6E09950030FAD9 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		84EE74C61B6E35BD0030FAD9 /* __vungle.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = __vungle.db; sourceTree = "<group>"; };
+		84EE74C71B6E35BD0030FAD9 /* vg_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_close.png; sourceTree = "<group>"; };
+		84EE74C81B6E35BD0030FAD9 /* vg_cta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_cta.png; sourceTree = "<group>"; };
+		84EE74C91B6E35BD0030FAD9 /* vg_mute_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_mute_off.png; sourceTree = "<group>"; };
+		84EE74CA1B6E35BD0030FAD9 /* vg_mute_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_mute_on.png; sourceTree = "<group>"; };
+		84EE74CB1B6E35BD0030FAD9 /* vg_privacy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_privacy.png; sourceTree = "<group>"; };
+		84EE74CC1B6E35BD0030FAD9 /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
 		960FF70D1B3B981F0054CE79 /* b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b1.png; path = myfiles/b1.png; sourceTree = "<group>"; };
 		9658959A1B21971A00D854FF /* hocphat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hocphat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658959E1B21971A00D854FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,6 +217,7 @@
 				84EE74B91B6E096F0030FAD9 /* AVFoundation.framework in Frameworks */,
 				84EE74B71B6E09640030FAD9 /* CFNetwork.framework in Frameworks */,
 				84EE74B51B6E095F0030FAD9 /* CoreAudio.framework in Frameworks */,
+				84EE74D31B6E35BD0030FAD9 /* VungleSDK.framework in Frameworks */,
 				84EE74B31B6E09530030FAD9 /* CoreLocation.framework in Frameworks */,
 				84EE74B11B6E094D0030FAD9 /* CoreTelephony.framework in Frameworks */,
 				84EE74AF1B6E09450030FAD9 /* MediaPlayer.framework in Frameworks */,
@@ -328,9 +343,32 @@
 			path = Libs;
 			sourceTree = "<group>";
 		};
+		84EE74C41B6E35BC0030FAD9 /* VungleSDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				84EE74C51B6E35BD0030FAD9 /* Resources */,
+				84EE74CC1B6E35BD0030FAD9 /* VungleSDK.framework */,
+			);
+			path = VungleSDK.embeddedframework;
+			sourceTree = "<group>";
+		};
+		84EE74C51B6E35BD0030FAD9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84EE74C61B6E35BD0030FAD9 /* __vungle.db */,
+				84EE74C71B6E35BD0030FAD9 /* vg_close.png */,
+				84EE74C81B6E35BD0030FAD9 /* vg_cta.png */,
+				84EE74C91B6E35BD0030FAD9 /* vg_mute_off.png */,
+				84EE74CA1B6E35BD0030FAD9 /* vg_mute_on.png */,
+				84EE74CB1B6E35BD0030FAD9 /* vg_privacy.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		965895911B21971A00D854FF = {
 			isa = PBXGroup;
 			children = (
+				84EE74C41B6E35BC0030FAD9 /* VungleSDK.embeddedframework */,
 				84EE74C01B6E09950030FAD9 /* EventKit.framework */,
 				84EE74C11B6E09950030FAD9 /* EventKitUI.framework */,
 				84EE74BE1B6E09840030FAD9 /* CoreData.framework */,
@@ -537,9 +575,13 @@
 				96ECAE401B2A8C3500551B52 /* vothuong.html in Resources */,
 				96ECAE461B2AA9F900551B52 /* icon9.png in Resources */,
 				96F3BA511B297D630004B7E3 /* 10congduc.html in Resources */,
+				84EE74D01B6E35BD0030FAD9 /* vg_mute_off.png in Resources */,
 				96F3BA461B2953990004B7E3 /* kinhnhanqua.html in Resources */,
+				84EE74CD1B6E35BD0030FAD9 /* __vungle.db in Resources */,
 				96F3BA591B297E200004B7E3 /* icon7.png in Resources */,
+				84EE74D11B6E35BD0030FAD9 /* vg_mute_on.png in Resources */,
 				96F3BA531B297D630004B7E3 /* soluoc.html in Resources */,
+				84EE74CF1B6E35BD0030FAD9 /* vg_cta.png in Resources */,
 				96ECAE491B2AA9F900551B52 /* icon12.png in Resources */,
 				96ECAE471B2AA9F900551B52 /* icon10.png in Resources */,
 				965895A51B21971A00D854FF /* Main.storyboard in Resources */,
@@ -554,8 +596,10 @@
 				965895CD1B26DB7300D854FF /* icon1.png in Resources */,
 				96F3BA581B297E200004B7E3 /* icon6.png in Resources */,
 				965895A71B21971A00D854FF /* Images.xcassets in Resources */,
+				84EE74CE1B6E35BD0030FAD9 /* vg_close.png in Resources */,
 				96F3BA401B294E200004B7E3 /* NhanQua.html in Resources */,
 				84A702121B6E05C0006BA0BB /* Changelog.txt in Resources */,
+				84EE74D21B6E35BD0030FAD9 /* vg_privacy.png in Resources */,
 				960FF70E1B3B981F0054CE79 /* b1.png in Resources */,
 				96F3BA451B2953990004B7E3 /* chudaibi.html in Resources */,
 				96F3BA4A1B2977ED0004B7E3 /* icon2.png in Resources */,
@@ -714,6 +758,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/AdTapsy/AdNetworks",
+					"$(PROJECT_DIR)/VungleSDK.embeddedframework",
 				);
 				INFOPLIST_FILE = Buddha2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -742,6 +787,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/AdTapsy/AdNetworks",
+					"$(PROJECT_DIR)/VungleSDK.embeddedframework",
 				);
 				INFOPLIST_FILE = Buddha2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
