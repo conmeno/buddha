@@ -18,10 +18,92 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     let textCellIdentifier = "TextCell"
     
     
+    
+    //adTapsy
+        var timerAd:NSTimer?
+    @IBOutlet weak var adView: UIView!
+    
+    @IBAction func MoreAppClick(sender: AnyObject) {
+        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-nguyen/id1004963752"
+        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)
+        
+    }
+    
+    
+    
+    @IBAction func MoreAppOutsite(sender: AnyObject) {
+        adView.hidden = false
+    }
+    
+    
+    
+    @IBAction func ShowAdClick(sender: AnyObject) {
+        if (AdTapsy.isAdReadyToShow()) {
+            println("Ad is ready to be shown");
+            AdTapsy.showInterstitial(self);
+            
+        } else {
+            println("Ad is not ready to be shown");
+        }
+    }
+    
+    
+    @IBOutlet weak var InfoBt: UIButton!
+    
+    @IBAction func InfoClick(sender: AnyObject) {
+        //call auto app
+        
+        adView.backgroundColor = UIColor.blueColor()
+        
+        
+        self.timerAd = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
+        
+    }
+    
+    @IBAction func InfoAutoAd(sender: AnyObject) {             }
+    
+    func timerMethodAutoAd(timer:NSTimer) {
+        println("auto play")
+        adView.backgroundColor = UIColor.redColor()
+        if (AdTapsy.isAdReadyToShow()) {
+            println("Ad is ready to be shown");
+            AdTapsy.showInterstitial(self);
+            
+        } else {
+            println("Ad is not ready to be shown");
+        }
+        
+    }
+    
+    //ad
+    // Add delegate functions
+    func adtapsyDidClickedAd() {
+        println("***adtapsyDidClickedAd***");
+    }
+    
+    func adtapsyDidFailedToShowAd() {
+        println("***adtapsyDidFailedToShowAd***");
+    }
+    
+    func adtapsyDidShowAd() {
+        println("***adtapsyDidShowAd***");
+    }
+    
+    func adtapsyDidSkippedAd() {
+        println("***adtapsyDidSkippedAd***");
+    }
+    
+    func adtapsyDidCachedAd() {
+        println("***adtapsyDidCachedAd***");
+    }
+    //end ad
+    //end adtapsy
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+         adView.hidden = true
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
