@@ -36,6 +36,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     
+    @IBAction func СloseAdPannel(sender: AnyObject) {
+        adView.hidden = true
+    }
     
     @IBAction func ShowAdClick(sender: AnyObject) {
         if (AdTapsy.isAdReadyToShow()) {
