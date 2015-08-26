@@ -8,7 +8,7 @@
 
 import UIKit
 import iAd
-
+ 
  
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate,ADBannerViewDelegate   {
 
@@ -114,14 +114,14 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     // 2
     override func viewWillAppear(animated: Bool) {
-        var SH = UIScreen.mainScreen().bounds.height
-       
-        UIiAd = self.appdelegate().UIiAd
-        UIiAd.frame = CGRectMake(0, SH - 50, 0, 0)
-        self.view.addSubview(UIiAd)
-        println("khoi tao ")
-        UIiAd.alpha = 0
-        UIiAd.delegate = self
+//        var SH = UIScreen.mainScreen().bounds.height
+//       
+//        UIiAd = self.appdelegate().UIiAd
+//        UIiAd.frame = CGRectMake(0, SH - 50, 0, 0)
+//        self.view.addSubview(UIiAd)
+//        println("khoi tao ")
+//        UIiAd.alpha = 0
+//        UIiAd.delegate = self
     }
     
     // 3

@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		84A599201B5CCEFB00123092 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */; };
+		84A6B3D21B8ABEBC00426D60 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */; };
+		84A6B3D51B8AD8C000426D60 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D41B8AD8C000426D60 /* FBSDKCoreKit.framework */; };
+		84A6B3D91B8D792D00426D60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D81B8D792D00426D60 /* UIKit.framework */; };
+		84A6B3DB1B8D793400426D60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */; };
+		84A6B3DD1B8D793A00426D60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DC1B8D793A00426D60 /* Foundation.framework */; };
+		84A6B3DF1B8D793F00426D60 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DE1B8D793F00426D60 /* AdSupport.framework */; };
+		84A6B3E11B8D794900426D60 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E01B8D794900426D60 /* CoreMotion.framework */; };
+		84A6B3E31B8D794F00426D60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E21B8D794F00426D60 /* StoreKit.framework */; };
+		84A6B3E51B8D795700426D60 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E41B8D795700426D60 /* libz.dylib */; };
+		84A6B3E71B8D795B00426D60 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E61B8D795B00426D60 /* AVFoundation.framework */; };
+		84A6B3E91B8D796100426D60 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E81B8D796100426D60 /* CoreTelephony.framework */; };
+		84A6B3EB1B8D796900426D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */; };
+		84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EC1B8D797300426D60 /* CoreMedia.framework */; };
+		84A6B3EF1B8D797D00426D60 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EE1B8D797D00426D60 /* libc++.dylib */; };
+		84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3F01B8D798300426D60 /* MediaPlayer.framework */; };
 		960FF70E1B3B981F0054CE79 /* b1.png in Resources */ = {isa = PBXBuildFile; fileRef = 960FF70D1B3B981F0054CE79 /* b1.png */; };
 		965895A01B21971A00D854FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658959F1B21971A00D854FF /* AppDelegate.swift */; };
 		965895A21B21971A00D854FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895A11B21971A00D854FF /* ViewController.swift */; };
@@ -54,6 +69,22 @@
 
 /* Begin PBXFileReference section */
 		84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vuonhoa-Bridging-header.h"; sourceTree = "<group>"; };
+		84A6B3D41B8AD8C000426D60 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		84A6B3D81B8D792D00426D60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		84A6B3DC1B8D793A00426D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84A6B3DE1B8D793F00426D60 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		84A6B3E01B8D794900426D60 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		84A6B3E21B8D794F00426D60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		84A6B3E41B8D795700426D60 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		84A6B3E61B8D795B00426D60 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		84A6B3E81B8D796100426D60 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		84A6B3EC1B8D797300426D60 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		84A6B3EE1B8D797D00426D60 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		84A6B3F01B8D798300426D60 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		960FF70D1B3B981F0054CE79 /* b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b1.png; path = myfiles/b1.png; sourceTree = "<group>"; };
 		9658959A1B21971A00D854FF /* hocphat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hocphat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658959E1B21971A00D854FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +128,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */,
+				84A6B3EF1B8D797D00426D60 /* libc++.dylib in Frameworks */,
+				84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */,
+				84A6B3EB1B8D796900426D60 /* SystemConfiguration.framework in Frameworks */,
+				84A6B3E91B8D796100426D60 /* CoreTelephony.framework in Frameworks */,
+				84A6B3E71B8D795B00426D60 /* AVFoundation.framework in Frameworks */,
+				84A6B3E51B8D795700426D60 /* libz.dylib in Frameworks */,
+				84A6B3E31B8D794F00426D60 /* StoreKit.framework in Frameworks */,
+				84A6B3E11B8D794900426D60 /* CoreMotion.framework in Frameworks */,
+				84A6B3DF1B8D793F00426D60 /* AdSupport.framework in Frameworks */,
+				84A6B3DD1B8D793A00426D60 /* Foundation.framework in Frameworks */,
+				84A6B3DB1B8D793400426D60 /* CoreGraphics.framework in Frameworks */,
+				84A6B3D91B8D792D00426D60 /* UIKit.framework in Frameworks */,
+				84A6B3D21B8ABEBC00426D60 /* FBAudienceNetwork.framework in Frameworks */,
+				84A6B3D51B8AD8C000426D60 /* FBSDKCoreKit.framework in Frameworks */,
 				84A599201B5CCEFB00123092 /* GoogleMobileAds.framework in Frameworks */,
 				9693FB7F1B3BACF000E0F444 /* iAd.framework in Frameworks */,
 			);
@@ -115,6 +161,22 @@
 		965895911B21971A00D854FF = {
 			isa = PBXGroup;
 			children = (
+				84A6B3F01B8D798300426D60 /* MediaPlayer.framework */,
+				84A6B3EE1B8D797D00426D60 /* libc++.dylib */,
+				84A6B3EC1B8D797300426D60 /* CoreMedia.framework */,
+				84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */,
+				84A6B3E81B8D796100426D60 /* CoreTelephony.framework */,
+				84A6B3E61B8D795B00426D60 /* AVFoundation.framework */,
+				84A6B3E41B8D795700426D60 /* libz.dylib */,
+				84A6B3E21B8D794F00426D60 /* StoreKit.framework */,
+				84A6B3E01B8D794900426D60 /* CoreMotion.framework */,
+				84A6B3DE1B8D793F00426D60 /* AdSupport.framework */,
+				84A6B3DC1B8D793A00426D60 /* Foundation.framework */,
+				84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */,
+				84A6B3D81B8D792D00426D60 /* UIKit.framework */,
+				84A6B3D41B8AD8C000426D60 /* FBSDKCoreKit.framework */,
+				84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */,
+				84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */,
 				84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */,
 				9693FB7E1B3BACF000E0F444 /* iAd.framework */,
 				965895CA1B26D3D200D854FF /* Data.swift */,
@@ -473,8 +535,10 @@
 				INFOPLIST_FILE = Buddha2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = hocphat;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "vuonhoa-Bridging-header.h";
 			};
 			name = Debug;
 		};
@@ -492,8 +556,10 @@
 				INFOPLIST_FILE = Buddha2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = hocphat;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "vuonhoa-Bridging-header.h";
 			};
 			name = Release;
 		};
