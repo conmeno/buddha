@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>93819DD2-464A-437C-981F-A27C54C9C76E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>hocphat</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FAB706E7D7D8BB6A3E78FEBA532BEE7A99469ACC</key>
 		<string>https://github.com/conmeno/buddha.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>hocphat.xcodeproj</string>
+	<string>hocphat.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FAB706E7D7D8BB6A3E78FEBA532BEE7A99469ACC</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>FAB706E7D7D8BB6A3E78FEBA532BEE7A99469ACC</string>
 			<key>IDESourceControlWCCName</key>
-			<string>buddha</string>
+			<string>AdmobBuddha</string>
 		</dict>
 	</array>
 </dict>

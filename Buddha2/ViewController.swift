@@ -10,14 +10,15 @@ import UIKit
 import iAd
  
  
-class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate,ADBannerViewDelegate   {
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate,FBAdViewDelegate, ADBannerViewDelegate   {
 
     @IBOutlet weak var tableView: UITableView!
     var UIiAd: ADBannerView = ADBannerView()
     let data = Data()
     let textCellIdentifier = "TextCell"
     
-    
+    @IBOutlet weak var fbBanner: FBAdView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,7 +26,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
-      
+       
+fbBanner = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
+    //self.view.addSubview(adView)
+    fbBanner?.delegate = self
+    FBAdSettings.addTestDevice("f6b6a819f4746f7aea0f52afd581d42f53c3a736")
+    fbBanner?.loadAd()
         
     }
 
@@ -45,7 +51,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         
         let row = indexPath.row
         let entry = data.places[row]
@@ -76,7 +82,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("myDetailView1") as UIViewController
+        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("myDetailView1") as! UIViewController
                  //presentViewController(initialViewController, animated: true, completion: nil)
         
         //self.window?.rootViewController = initialViewController
@@ -89,7 +95,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         {
             Varialbes.Static.CurrentIndex = row
             
-            var WebDetailView = storyboard.instantiateViewControllerWithIdentifier("webDetail") as UIViewController
+            var WebDetailView = storyboard.instantiateViewControllerWithIdentifier("webDetail") as! UIViewController
             
             
             self.navigationController?.pushViewController(WebDetailView, animated: true)
@@ -109,7 +115,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     //begin iad
     // 1
     func appdelegate() -> AppDelegate {
-        return UIApplication.sharedApplication().delegate as AppDelegate
+        return UIApplication.sharedApplication().delegate as! AppDelegate
     }
     
     // 2
@@ -143,6 +149,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         UIiAd.alpha = 1
         UIView.commitAnimations()
          println("da load ")
+
     }
     
     // 5

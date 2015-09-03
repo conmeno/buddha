@@ -41,7 +41,7 @@ class DetailViewController: UIViewController,ADBannerViewDelegate  {
     //begin iad
     // 1
     func appdelegate() -> AppDelegate {
-        return UIApplication.sharedApplication().delegate as AppDelegate
+        return UIApplication.sharedApplication().delegate as! AppDelegate
     }
     
     // 2
