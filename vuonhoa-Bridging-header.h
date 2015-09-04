@@ -6,7 +6,7 @@
 //  Copyright (c) 2558 BE Phuong Nguyen. All rights reserved.
 //
 
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
+//#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBAudienceNetwork/FBAudienceNetwork.h>
 
 #ifndef vuonhoaphatgiao_vuonhoa_Bridging_header_h

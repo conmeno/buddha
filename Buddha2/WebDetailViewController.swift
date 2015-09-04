@@ -10,7 +10,7 @@ import UIKit
 //import iAd
 import GoogleMobileAds
 
-class WebDetailViewController: UIViewController  {
+class WebDetailViewController: UIViewController,FBAdViewDelegate  {
     
      let data = Data()
     //var UIiAd: ADBannerView = ADBannerView()
@@ -19,37 +19,45 @@ class WebDetailViewController: UIViewController  {
     @IBOutlet weak var admobBanner: GADBannerView!
     @IBOutlet weak var webView1: UIWebView!
      var WebURL = Varialbes.Static.URL
+
+    func ShowFB()
+    {
+        var fbBanner: FBAdView = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
+        fbBanner.delegate = self
+ 
+        FBAdSettings.addTestDevice("96f1b863a45b29921976b97a6aa858812ac828ee")
+        fbBanner.loadAd()
+        fbBanner.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: 320, height: 90)
+        self.view.addSubview(fbBanner)
+    }
+    func ShowAdmob()
+    {
+        admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
+        admobBanner.rootViewController = self
+        var request:GADRequest = GADRequest()
+        var devices: [String] = ["ac25ecb9469dee00643c6e43651caa56", "xyze"]
+        request.testDevices = devices
+        admobBanner.loadRequest(request)
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //admob
-//        admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
-//        admobBanner.rootViewController = self
-//        self.view.addSubview(admobBanner)
-//        var request: GADRequest = GADRequest()
-//        request.testDevices = [""]
-//        admobBanner.loadRequest(request)
-        
-        
-        
-       //admobBanner = GADBannerView(adSize: kGADAdSizeBanner)
-        admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
-
-        //admobBanner?.delegate = self
-        admobBanner.rootViewController = self
-        self.view.addSubview(admobBanner!)
-        var request:GADRequest = GADRequest()
-        
-       
-            var devices: [String] = ["abc", "xyze"]
-            request.testDevices = devices
-        
-        admobBanner.loadRequest(request)
-        //end admob
-        
         let entry = data.places[Varialbes.Static.CurrentIndex]
         self.title = entry.Title
+
+        if(entry.adType == 1)
+        {
+            ShowAdmob()
+        
+        }else
+        {
+            ShowFB()
+        }
+        
+
         if(entry.Title == "")
         {
             self.title = entry.Name

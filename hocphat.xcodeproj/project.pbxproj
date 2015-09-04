@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		84A599201B5CCEFB00123092 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */; };
 		84A6B3D21B8ABEBC00426D60 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */; };
-		84A6B3D51B8AD8C000426D60 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D41B8AD8C000426D60 /* FBSDKCoreKit.framework */; };
 		84A6B3D91B8D792D00426D60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D81B8D792D00426D60 /* UIKit.framework */; };
 		84A6B3DB1B8D793400426D60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */; };
 		84A6B3DD1B8D793A00426D60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DC1B8D793A00426D60 /* Foundation.framework */; };
@@ -71,7 +70,6 @@
 		84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vuonhoa-Bridging-header.h"; sourceTree = "<group>"; };
-		84A6B3D41B8AD8C000426D60 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		84A6B3D81B8D792D00426D60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		84A6B3DC1B8D793A00426D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,7 +140,6 @@
 				84A6B3DB1B8D793400426D60 /* CoreGraphics.framework in Frameworks */,
 				84A6B3D91B8D792D00426D60 /* UIKit.framework in Frameworks */,
 				84A6B3D21B8ABEBC00426D60 /* FBAudienceNetwork.framework in Frameworks */,
-				84A6B3D51B8AD8C000426D60 /* FBSDKCoreKit.framework in Frameworks */,
 				84A599201B5CCEFB00123092 /* GoogleMobileAds.framework in Frameworks */,
 				9693FB7F1B3BACF000E0F444 /* iAd.framework in Frameworks */,
 			);
@@ -174,7 +171,6 @@
 				84A6B3DC1B8D793A00426D60 /* Foundation.framework */,
 				84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */,
 				84A6B3D81B8D792D00426D60 /* UIKit.framework */,
-				84A6B3D41B8AD8C000426D60 /* FBSDKCoreKit.framework */,
 				84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */,
 				84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */,
 				84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */,

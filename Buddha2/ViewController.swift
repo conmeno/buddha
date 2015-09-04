@@ -10,14 +10,24 @@ import UIKit
 import iAd
  
  
-class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate,FBAdViewDelegate, ADBannerViewDelegate   {
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, ADBannerViewDelegate,FBAdViewDelegate   {
 
     @IBOutlet weak var tableView: UITableView!
     var UIiAd: ADBannerView = ADBannerView()
     let data = Data()
     let textCellIdentifier = "TextCell"
     
-    @IBOutlet weak var fbBanner: FBAdView!
+   // @IBOutlet weak var fbBanner: FBAdView!
+ func ShowFB()
+    {
+        var fbBanner: FBAdView = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
+        fbBanner.delegate = self
+ 
+        FBAdSettings.addTestDevice("96f1b863a45b29921976b97a6aa858812ac828ee")
+        fbBanner.loadAd()
+        fbBanner.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: 320, height: 90)
+        self.view.addSubview(fbBanner)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +37,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
        
-fbBanner = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
-    //self.view.addSubview(adView)
-    fbBanner?.delegate = self
-    FBAdSettings.addTestDevice("f6b6a819f4746f7aea0f52afd581d42f53c3a736")
-    fbBanner?.loadAd()
+//fbBanner = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
+//    //self.view.addSubview(adView)
+//    fbBanner?.delegate = self
+//    FBAdSettings.addTestDevice("f6b6a819f4746f7aea0f52afd581d42f53c3a736")
+//    fbBanner?.loadAd()
+ShowFB()
         
     }
 
@@ -104,7 +115,7 @@ fbBanner = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBA
         else
         {
         
-        self.navigationController?.pushViewController(initialViewController, animated: true)
+        //self.navigationController?.pushViewController(initialViewController, animated: true)
         }
 
     }
