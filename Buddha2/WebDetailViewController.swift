@@ -10,7 +10,7 @@ import UIKit
 //import iAd
 import GoogleMobileAds
 
-class WebDetailViewController: UIViewController,FBAdViewDelegate  {
+class WebDetailViewController: UIViewController  {
     
      let data = Data()
     //var UIiAd: ADBannerView = ADBannerView()
@@ -20,16 +20,16 @@ class WebDetailViewController: UIViewController,FBAdViewDelegate  {
     @IBOutlet weak var webView1: UIWebView!
      var WebURL = Varialbes.Static.URL
 
-    func ShowFB()
-    {
-        var fbBanner: FBAdView = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
-        fbBanner.delegate = self
- 
-        FBAdSettings.addTestDevice("96f1b863a45b29921976b97a6aa858812ac828ee")
-        fbBanner.loadAd()
-        fbBanner.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: 320, height: 90)
-        self.view.addSubview(fbBanner)
-    }
+//    func ShowFB()
+//    {
+//        var fbBanner: FBAdView = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
+//        fbBanner.delegate = self
+// 
+//        FBAdSettings.addTestDevice("96f1b863a45b29921976b97a6aa858812ac828ee")
+//        fbBanner.loadAd()
+//        fbBanner.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: 320, height: 90)
+//        self.view.addSubview(fbBanner)
+//    }
     func ShowAdmob()
     {
         admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
@@ -54,8 +54,7 @@ class WebDetailViewController: UIViewController,FBAdViewDelegate  {
         
         }else
         {
-            ShowFB()
-        }
+             AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)        }
         
 
         if(entry.Title == "")

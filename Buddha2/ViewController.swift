@@ -7,27 +7,17 @@
 //
 
 import UIKit
-import iAd
+
  
  
-class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, ADBannerViewDelegate,FBAdViewDelegate   {
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate   {
 
     @IBOutlet weak var tableView: UITableView!
-    var UIiAd: ADBannerView = ADBannerView()
     let data = Data()
     let textCellIdentifier = "TextCell"
     
    // @IBOutlet weak var fbBanner: FBAdView!
- func ShowFB()
-    {
-        var fbBanner: FBAdView = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
-        fbBanner.delegate = self
- 
-        FBAdSettings.addTestDevice("96f1b863a45b29921976b97a6aa858812ac828ee")
-        fbBanner.loadAd()
-        fbBanner.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: 320, height: 90)
-        self.view.addSubview(fbBanner)
-    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +26,10 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
-       
-//fbBanner = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
-//    //self.view.addSubview(adView)
-//    fbBanner?.delegate = self
-//    FBAdSettings.addTestDevice("f6b6a819f4746f7aea0f52afd581d42f53c3a736")
-//    fbBanner?.loadAd()
-ShowFB()
+        
+        
+        AP_SDK.setCallBackDelegate(self)
+ AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
         
     }
 
@@ -62,7 +49,8 @@ ShowFB()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as
+        UITableViewCell
         
         let row = indexPath.row
         let entry = data.places[row]
@@ -93,7 +81,7 @@ ShowFB()
         
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("myDetailView1") as! UIViewController
+        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("myDetailView1") as UIViewController
                  //presentViewController(initialViewController, animated: true, completion: nil)
         
         //self.window?.rootViewController = initialViewController
@@ -106,7 +94,7 @@ ShowFB()
         {
             Varialbes.Static.CurrentIndex = row
             
-            var WebDetailView = storyboard.instantiateViewControllerWithIdentifier("webDetail") as! UIViewController
+            var WebDetailView = storyboard.instantiateViewControllerWithIdentifier("webDetail") as UIViewController
             
             
             self.navigationController?.pushViewController(WebDetailView, animated: true)
@@ -121,58 +109,6 @@ ShowFB()
     }
     //end table view
     
-    
-    
-    //begin iad
-    // 1
-    func appdelegate() -> AppDelegate {
-        return UIApplication.sharedApplication().delegate as! AppDelegate
-    }
-    
-    // 2
-    override func viewWillAppear(animated: Bool) {
-//        var SH = UIScreen.mainScreen().bounds.height
-//       
-//        UIiAd = self.appdelegate().UIiAd
-//        UIiAd.frame = CGRectMake(0, SH - 50, 0, 0)
-//        self.view.addSubview(UIiAd)
-//        println("khoi tao ")
-//        UIiAd.alpha = 0
-//        UIiAd.delegate = self
-    }
-    
-    // 3
-    override func viewWillDisappear(animated: Bool) {
-        UIiAd.delegate = nil
-        UIiAd.removeFromSuperview()
-    }
-    
-    //   bannerViewWillLoadAd
-    func bannerViewWillLoadAd(banner: ADBannerView!) {
-        println("will load ")
-    }
-    
-    
-    // 4
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        UIView.beginAnimations(nil, context: nil)
-        UIView.setAnimationDuration(1)
-        UIiAd.alpha = 1
-        UIView.commitAnimations()
-         println("da load ")
-
-    }
-    
-    // 5
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        UIView.beginAnimations(nil, context: nil)
-        UIView.setAnimationDuration(0)
-        UIiAd.alpha = 1
-        UIView.commitAnimations()
-        println("fail load ")
-
-    }
-    //end iad
     
 
 }

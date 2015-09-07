@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		84A599201B5CCEFB00123092 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */; };
-		84A6B3D21B8ABEBC00426D60 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */; };
 		84A6B3D91B8D792D00426D60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D81B8D792D00426D60 /* UIKit.framework */; };
 		84A6B3DB1B8D793400426D60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */; };
 		84A6B3DD1B8D793A00426D60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DC1B8D793A00426D60 /* Foundation.framework */; };
@@ -22,6 +21,13 @@
 		84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EC1B8D797300426D60 /* CoreMedia.framework */; };
 		84A6B3EF1B8D797D00426D60 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EE1B8D797D00426D60 /* libc++.dylib */; };
 		84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3F01B8D798300426D60 /* MediaPlayer.framework */; };
+		84A880E71B99868100354A36 /* libAP_SDK-1.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880E61B99868100354A36 /* libAP_SDK-1.4.a */; };
+		84A880EB1B9988C800354A36 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880EA1B9988C800354A36 /* WebKit.framework */; };
+		84A880ED1B9988D700354A36 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880EC1B9988D700354A36 /* MessageUI.framework */; };
+		84A880EF1B9988E300354A36 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880EE1B9988E300354A36 /* ImageIO.framework */; };
+		84A880F11B9988F300354A36 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880F01B9988F300354A36 /* CoreText.framework */; };
+		84A880F31B9988FD00354A36 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880F21B9988FD00354A36 /* CFNetwork.framework */; };
+		84A880F51B99890800354A36 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880F41B99890800354A36 /* AudioToolbox.framework */; };
 		960FF70E1B3B981F0054CE79 /* b1.png in Resources */ = {isa = PBXBuildFile; fileRef = 960FF70D1B3B981F0054CE79 /* b1.png */; };
 		965895A01B21971A00D854FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658959F1B21971A00D854FF /* AppDelegate.swift */; };
 		965895A21B21971A00D854FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895A11B21971A00D854FF /* ViewController.swift */; };
@@ -34,7 +40,6 @@
 		965895C91B26BE4600D854FF /* Varialbes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895C81B26BE4600D854FF /* Varialbes.swift */; };
 		965895CB1B26D3D200D854FF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895CA1B26D3D200D854FF /* Data.swift */; };
 		965895CD1B26DB7300D854FF /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 965895CC1B26DB7300D854FF /* icon1.png */; };
-		9693FB7F1B3BACF000E0F444 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9693FB7E1B3BACF000E0F444 /* iAd.framework */; };
 		96ECAE401B2A8C3500551B52 /* vothuong.html in Resources */ = {isa = PBXBuildFile; fileRef = 96ECAE3F1B2A8C3500551B52 /* vothuong.html */; };
 		96ECAE461B2AA9F900551B52 /* icon9.png in Resources */ = {isa = PBXBuildFile; fileRef = 96ECAE411B2AA9F900551B52 /* icon9.png */; };
 		96ECAE471B2AA9F900551B52 /* icon10.png in Resources */ = {isa = PBXBuildFile; fileRef = 96ECAE421B2AA9F900551B52 /* icon10.png */; };
@@ -68,7 +73,6 @@
 
 /* Begin PBXFileReference section */
 		84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vuonhoa-Bridging-header.h"; sourceTree = "<group>"; };
 		84A6B3D81B8D792D00426D60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +87,16 @@
 		84A6B3EC1B8D797300426D60 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		84A6B3EE1B8D797D00426D60 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		84A6B3F01B8D798300426D60 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		84A880E31B99868100354A36 /* AP_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AP_SDK.h; sourceTree = "<group>"; };
+		84A880E41B99868100354A36 /* APCallBackDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCallBackDelegate.h; sourceTree = "<group>"; };
+		84A880E51B99868100354A36 /* APMediationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMediationDelegate.h; sourceTree = "<group>"; };
+		84A880E61B99868100354A36 /* libAP_SDK-1.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libAP_SDK-1.4.a"; sourceTree = "<group>"; };
+		84A880EA1B9988C800354A36 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		84A880EC1B9988D700354A36 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		84A880EE1B9988E300354A36 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		84A880F01B9988F300354A36 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		84A880F21B9988FD00354A36 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		84A880F41B99890800354A36 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		960FF70D1B3B981F0054CE79 /* b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b1.png; path = myfiles/b1.png; sourceTree = "<group>"; };
 		9658959A1B21971A00D854FF /* hocphat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hocphat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658959E1B21971A00D854FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +113,6 @@
 		965895C81B26BE4600D854FF /* Varialbes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Varialbes.swift; sourceTree = "<group>"; };
 		965895CA1B26D3D200D854FF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		965895CC1B26DB7300D854FF /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
-		9693FB7E1B3BACF000E0F444 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		96ECAE3F1B2A8C3500551B52 /* vothuong.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = vothuong.html; path = myfiles/vothuong.html; sourceTree = "<group>"; };
 		96ECAE411B2AA9F900551B52 /* icon9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon9.png; path = myfiles/icon9.png; sourceTree = "<group>"; };
 		96ECAE421B2AA9F900551B52 /* icon10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon10.png; path = myfiles/icon10.png; sourceTree = "<group>"; };
@@ -126,22 +139,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */,
+				84A880F51B99890800354A36 /* AudioToolbox.framework in Frameworks */,
+				84A880F31B9988FD00354A36 /* CFNetwork.framework in Frameworks */,
+				84A880F11B9988F300354A36 /* CoreText.framework in Frameworks */,
+				84A6B3E91B8D796100426D60 /* CoreTelephony.framework in Frameworks */,
+				84A880EF1B9988E300354A36 /* ImageIO.framework in Frameworks */,
+				84A880ED1B9988D700354A36 /* MessageUI.framework in Frameworks */,
+				84A880EB1B9988C800354A36 /* WebKit.framework in Frameworks */,
 				84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */,
 				84A6B3EF1B8D797D00426D60 /* libc++.dylib in Frameworks */,
-				84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */,
 				84A6B3EB1B8D796900426D60 /* SystemConfiguration.framework in Frameworks */,
-				84A6B3E91B8D796100426D60 /* CoreTelephony.framework in Frameworks */,
 				84A6B3E71B8D795B00426D60 /* AVFoundation.framework in Frameworks */,
 				84A6B3E51B8D795700426D60 /* libz.dylib in Frameworks */,
 				84A6B3E31B8D794F00426D60 /* StoreKit.framework in Frameworks */,
 				84A6B3E11B8D794900426D60 /* CoreMotion.framework in Frameworks */,
 				84A6B3DF1B8D793F00426D60 /* AdSupport.framework in Frameworks */,
 				84A6B3DD1B8D793A00426D60 /* Foundation.framework in Frameworks */,
+				84A880E71B99868100354A36 /* libAP_SDK-1.4.a in Frameworks */,
 				84A6B3DB1B8D793400426D60 /* CoreGraphics.framework in Frameworks */,
 				84A6B3D91B8D792D00426D60 /* UIKit.framework in Frameworks */,
-				84A6B3D21B8ABEBC00426D60 /* FBAudienceNetwork.framework in Frameworks */,
 				84A599201B5CCEFB00123092 /* GoogleMobileAds.framework in Frameworks */,
-				9693FB7F1B3BACF000E0F444 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,9 +173,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84A880E21B99868100354A36 /* Airpush_iOS_SDK_V1.4 */ = {
+			isa = PBXGroup;
+			children = (
+				84A880E31B99868100354A36 /* AP_SDK.h */,
+				84A880E41B99868100354A36 /* APCallBackDelegate.h */,
+				84A880E51B99868100354A36 /* APMediationDelegate.h */,
+				84A880E61B99868100354A36 /* libAP_SDK-1.4.a */,
+			);
+			path = Airpush_iOS_SDK_V1.4;
+			sourceTree = "<group>";
+		};
 		965895911B21971A00D854FF = {
 			isa = PBXGroup;
 			children = (
+				84A880F41B99890800354A36 /* AudioToolbox.framework */,
+				84A880F21B9988FD00354A36 /* CFNetwork.framework */,
+				84A880F01B9988F300354A36 /* CoreText.framework */,
+				84A880EE1B9988E300354A36 /* ImageIO.framework */,
+				84A880EC1B9988D700354A36 /* MessageUI.framework */,
+				84A880EA1B9988C800354A36 /* WebKit.framework */,
+				84A880E21B99868100354A36 /* Airpush_iOS_SDK_V1.4 */,
 				84A6B3F01B8D798300426D60 /* MediaPlayer.framework */,
 				84A6B3EE1B8D797D00426D60 /* libc++.dylib */,
 				84A6B3EC1B8D797300426D60 /* CoreMedia.framework */,
@@ -172,9 +208,7 @@
 				84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */,
 				84A6B3D81B8D792D00426D60 /* UIKit.framework */,
 				84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */,
-				84A6B3D11B8ABEBC00426D60 /* FBAudienceNetwork.framework */,
 				84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */,
-				9693FB7E1B3BACF000E0F444 /* iAd.framework */,
 				965895CA1B26D3D200D854FF /* Data.swift */,
 				965895C81B26BE4600D854FF /* Varialbes.swift */,
 				9658959C1B21971A00D854FF /* Buddha2 */,
@@ -531,6 +565,10 @@
 				INFOPLIST_FILE = Buddha2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airpush_iOS_SDK_V1.4",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = hocphat;
 				PROVISIONING_PROFILE = "";
@@ -552,6 +590,10 @@
 				INFOPLIST_FILE = Buddha2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airpush_iOS_SDK_V1.4",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = hocphat;
 				PROVISIONING_PROFILE = "";
