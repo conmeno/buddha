@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2aW-3Y-AmM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2aW-3Y-AmM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -23,6 +23,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-bH-7yO" customClass="AmazonAdView">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="58n-VO-BS3"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1o-ZA-fyj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -105,6 +112,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aAc-bH-7yO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1tC-59-fdR"/>
                             <constraint firstAttribute="bottomMargin" secondItem="SYY-Xa-She" secondAttribute="bottom" id="Bgj-sy-bRe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SYY-Xa-She" secondAttribute="trailing" constant="-16" id="Bm6-OU-yY2"/>
                             <constraint firstItem="SYY-Xa-She" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Cf6-zF-kcX"/>
@@ -119,9 +127,12 @@
                             <constraint firstItem="y1o-ZA-fyj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="cOj-vh-U29"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SYY-Xa-She" secondAttribute="bottom" id="fde-1f-XpO"/>
                             <constraint firstItem="y1o-ZA-fyj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="l1W-Fl-zLe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aAc-bH-7yO" secondAttribute="trailing" constant="-16" id="lV3-7F-XDw"/>
                             <constraint firstItem="SYY-Xa-She" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="pKn-FV-sV6"/>
+                            <constraint firstAttribute="centerX" secondItem="aAc-bH-7yO" secondAttribute="centerX" id="qiN-T1-b5u"/>
                             <constraint firstItem="SYY-Xa-She" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="tir-oa-e8R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y1o-ZA-fyj" secondAttribute="bottom" id="uS5-uP-Bcr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aAc-bH-7yO" secondAttribute="bottom" id="uc6-76-A7d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y1o-ZA-fyj" secondAttribute="trailing" constant="-16" id="vfl-9C-9uP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y1o-ZA-fyj" secondAttribute="bottom" id="yfP-Wm-Kfw"/>
                             <constraint firstItem="y1o-ZA-fyj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="zAH-re-tvw"/>
@@ -131,6 +142,12 @@
                                 <exclude reference="y1o-ZA-fyj"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Nd9-89-647"/>
+                                <exclude reference="UNw-Tw-IQp"/>
+                                <exclude reference="cOj-vh-U29"/>
+                                <exclude reference="l1W-Fl-zLe"/>
+                                <exclude reference="vfl-9C-9uP"/>
+                                <exclude reference="zAH-re-tvw"/>
                                 <exclude reference="Bm6-OU-yY2"/>
                                 <exclude reference="Cf6-zF-kcX"/>
                                 <exclude reference="Hcl-ah-rJs"/>
@@ -141,12 +158,6 @@
                                 <exclude reference="fde-1f-XpO"/>
                                 <exclude reference="uS5-uP-Bcr"/>
                                 <exclude reference="yfP-Wm-Kfw"/>
-                                <exclude reference="Nd9-89-647"/>
-                                <exclude reference="UNw-Tw-IQp"/>
-                                <exclude reference="cOj-vh-U29"/>
-                                <exclude reference="l1W-Fl-zLe"/>
-                                <exclude reference="vfl-9C-9uP"/>
-                                <exclude reference="zAH-re-tvw"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -155,14 +166,14 @@
                                 <include reference="y1o-ZA-fyj"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="UNw-Tw-IQp"/>
+                                <include reference="l1W-Fl-zLe"/>
+                                <include reference="zAH-re-tvw"/>
                                 <include reference="Cf6-zF-kcX"/>
                                 <include reference="Hcl-ah-rJs"/>
                                 <include reference="NgN-VF-Sa3"/>
                                 <include reference="R9z-Ff-CaZ"/>
                                 <include reference="uS5-uP-Bcr"/>
-                                <include reference="UNw-Tw-IQp"/>
-                                <include reference="l1W-Fl-zLe"/>
-                                <include reference="zAH-re-tvw"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -170,14 +181,14 @@
                                 <include reference="y1o-ZA-fyj"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Nd9-89-647"/>
+                                <include reference="cOj-vh-U29"/>
+                                <include reference="vfl-9C-9uP"/>
                                 <include reference="Bm6-OU-yY2"/>
                                 <include reference="SpY-MX-guU"/>
                                 <include reference="tir-oa-e8R"/>
                                 <include reference="fde-1f-XpO"/>
                                 <include reference="yfP-Wm-Kfw"/>
-                                <include reference="Nd9-89-647"/>
-                                <include reference="cOj-vh-U29"/>
-                                <include reference="vfl-9C-9uP"/>
                             </mask>
                         </variation>
                     </view>
@@ -185,6 +196,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="guc-Ri-FZD"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="amazonAdView" destination="aAc-bH-7yO" id="jbd-Xn-lWK"/>
                         <outlet property="tableView" destination="LSv-EQ-I5N" id="f4g-Oj-cP8"/>
                     </connections>
                 </viewController>

@@ -10,29 +10,66 @@ import UIKit
 
  
  
-class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate   {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate   {
 
+    
     @IBOutlet weak var tableView: UITableView!
     let data = Data()
     let textCellIdentifier = "TextCell"
     
    // @IBOutlet weak var fbBanner: FBAdView!
+    @IBOutlet var amazonAdView: AmazonAdView!
+    func showAmazon()
+    {
+        amazonAdView = AmazonAdView(adSize: AmazonAdSize_320x50)
+        loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
+        amazonAdView.delegate = nil
+        self.view.addSubview(amazonAdView)
+    }
+    
+    func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
+        
+        var options = AmazonAdOptions()
+        options.isTestRequest = true
+        
+        if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
+            amazonAdView.frame = CGRectMake(0, self.view.bounds.height - 50, 728, 50)
+        } else {
+            amazonAdView.removeFromSuperview()
+            
+            if (interfaceOrientation == UIInterfaceOrientation.Portrait) {
+                amazonAdView = AmazonAdView(adSize: AmazonAdSize_728x90)
+                amazonAdView.frame = CGRectMake((self.view.bounds.width-728.0)/2.0, self.view.bounds.height - 50, 728.0, 90.0)
+            } else {
+                amazonAdView = AmazonAdView(adSize: AmazonAdSize_1024x50)
+                amazonAdView.frame = CGRectMake((self.view.bounds.width-1024.0)/2.0, self.view.bounds.height - 50, 1024.0, 50.0)
+            }
+            self.view.addSubview(amazonAdView)
+            amazonAdView.delegate = nil
+        }
+        
+        amazonAdView.loadAd(options)
+    }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      // println(UIDevice.currentDevice().)
         // Do any additional setup after loading the view, typically from a nib.
-        
+        showAmazon()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
         
         
-        AP_SDK.setCallBackDelegate(self)
- AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
+//        AP_SDK.setCallBackDelegate(self)
+//        AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
+        
+        
+ 
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

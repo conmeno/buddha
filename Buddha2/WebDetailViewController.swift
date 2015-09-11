@@ -10,6 +10,7 @@ import UIKit
 //import iAd
 import GoogleMobileAds
 
+
 class WebDetailViewController: UIViewController  {
     
      let data = Data()
@@ -18,6 +19,7 @@ class WebDetailViewController: UIViewController  {
     
     @IBOutlet weak var admobBanner: GADBannerView!
     @IBOutlet weak var webView1: UIWebView!
+    @IBOutlet var amazonAdView: AmazonAdView!
      var WebURL = Varialbes.Static.URL
 
 //    func ShowFB()
@@ -29,6 +31,38 @@ class WebDetailViewController: UIViewController  {
 //        fbBanner.loadAd()
 //        fbBanner.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: 320, height: 90)
 //        self.view.addSubview(fbBanner)
+//    }
+    
+//    func showAmazon()
+//    {
+//        amazonAdView = AmazonAdView(adSize: AmazonAdSize_320x50)
+//        loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
+//        amazonAdView.delegate = nil
+//        self.view.addSubview(amazonAdView)
+//    }
+//    
+//    func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
+//        
+//        var options = AmazonAdOptions()
+//        options.isTestRequest = true
+//        
+//        if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
+//            amazonAdView.frame = CGRectMake(0, self.view.bounds.height - 50, 320, 50)
+//        } else {
+//            amazonAdView.removeFromSuperview()
+//            
+//            if (interfaceOrientation == UIInterfaceOrientation.Portrait) {
+//                amazonAdView = AmazonAdView(adSize: AmazonAdSize_728x90)
+//                amazonAdView.frame = CGRectMake((self.view.bounds.width-728.0)/2.0, self.view.bounds.height - 50, 728.0, 90.0)
+//            } else {
+//                amazonAdView = AmazonAdView(adSize: AmazonAdSize_1024x50)
+//                amazonAdView.frame = CGRectMake((self.view.bounds.width-1024.0)/2.0, self.view.bounds.height - 50, 1024.0, 50.0)
+//            }
+//            self.view.addSubview(amazonAdView)
+//            amazonAdView.delegate = nil
+//        }
+//        
+//        amazonAdView.loadAd(options)
 //    }
     func ShowAdmob()
     {
@@ -54,7 +88,9 @@ class WebDetailViewController: UIViewController  {
         
         }else
         {
-             AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)        }
+           // showAmazon()
+            AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
+        }
         
 
         if(entry.Title == "")

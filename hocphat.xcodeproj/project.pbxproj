@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84A5008E1BA269350092D279 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5008D1BA269350092D279 /* AmazonAd.framework */; };
+		84A500901BA269E30092D279 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5008F1BA269E30092D279 /* CoreLocation.framework */; };
+		84A500931BA26A100092D279 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A500911BA26A100092D279 /* EventKit.framework */; };
+		84A500941BA26A100092D279 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A500921BA26A100092D279 /* EventKitUI.framework */; };
 		84A599201B5CCEFB00123092 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */; };
 		84A6B3D91B8D792D00426D60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D81B8D792D00426D60 /* UIKit.framework */; };
 		84A6B3DB1B8D793400426D60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */; };
@@ -72,6 +76,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84A5008D1BA269350092D279 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
+		84A5008F1BA269E30092D279 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		84A500911BA26A100092D279 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		84A500921BA26A100092D279 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vuonhoa-Bridging-header.h"; sourceTree = "<group>"; };
 		84A6B3D81B8D792D00426D60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -139,6 +147,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A500931BA26A100092D279 /* EventKit.framework in Frameworks */,
+				84A500941BA26A100092D279 /* EventKitUI.framework in Frameworks */,
+				84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */,
+				84A500901BA269E30092D279 /* CoreLocation.framework in Frameworks */,
+				84A6B3E31B8D794F00426D60 /* StoreKit.framework in Frameworks */,
 				84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */,
 				84A880F51B99890800354A36 /* AudioToolbox.framework in Frameworks */,
 				84A880F31B9988FD00354A36 /* CFNetwork.framework in Frameworks */,
@@ -147,12 +160,11 @@
 				84A880EF1B9988E300354A36 /* ImageIO.framework in Frameworks */,
 				84A880ED1B9988D700354A36 /* MessageUI.framework in Frameworks */,
 				84A880EB1B9988C800354A36 /* WebKit.framework in Frameworks */,
-				84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */,
 				84A6B3EF1B8D797D00426D60 /* libc++.dylib in Frameworks */,
 				84A6B3EB1B8D796900426D60 /* SystemConfiguration.framework in Frameworks */,
 				84A6B3E71B8D795B00426D60 /* AVFoundation.framework in Frameworks */,
 				84A6B3E51B8D795700426D60 /* libz.dylib in Frameworks */,
-				84A6B3E31B8D794F00426D60 /* StoreKit.framework in Frameworks */,
+				84A5008E1BA269350092D279 /* AmazonAd.framework in Frameworks */,
 				84A6B3E11B8D794900426D60 /* CoreMotion.framework in Frameworks */,
 				84A6B3DF1B8D793F00426D60 /* AdSupport.framework in Frameworks */,
 				84A6B3DD1B8D793A00426D60 /* Foundation.framework in Frameworks */,
@@ -187,6 +199,10 @@
 		965895911B21971A00D854FF = {
 			isa = PBXGroup;
 			children = (
+				84A500911BA26A100092D279 /* EventKit.framework */,
+				84A500921BA26A100092D279 /* EventKitUI.framework */,
+				84A5008F1BA269E30092D279 /* CoreLocation.framework */,
+				84A5008D1BA269350092D279 /* AmazonAd.framework */,
 				84A880F41B99890800354A36 /* AudioToolbox.framework */,
 				84A880F21B9988FD00354A36 /* CFNetwork.framework */,
 				84A880F01B9988F300354A36 /* CoreText.framework */,
