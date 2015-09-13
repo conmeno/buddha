@@ -19,7 +19,7 @@ class WebDetailViewController: UIViewController  {
     
     @IBOutlet weak var admobBanner: GADBannerView!
     @IBOutlet weak var webView1: UIWebView!
-    @IBOutlet var amazonAdView: AmazonAdView!
+    
      var WebURL = Varialbes.Static.URL
 
 //    func ShowFB()
@@ -33,37 +33,7 @@ class WebDetailViewController: UIViewController  {
 //        self.view.addSubview(fbBanner)
 //    }
     
-//    func showAmazon()
-//    {
-//        amazonAdView = AmazonAdView(adSize: AmazonAdSize_320x50)
-//        loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
-//        amazonAdView.delegate = nil
-//        self.view.addSubview(amazonAdView)
-//    }
-//    
-//    func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
-//        
-//        var options = AmazonAdOptions()
-//        options.isTestRequest = true
-//        
-//        if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
-//            amazonAdView.frame = CGRectMake(0, self.view.bounds.height - 50, 320, 50)
-//        } else {
-//            amazonAdView.removeFromSuperview()
-//            
-//            if (interfaceOrientation == UIInterfaceOrientation.Portrait) {
-//                amazonAdView = AmazonAdView(adSize: AmazonAdSize_728x90)
-//                amazonAdView.frame = CGRectMake((self.view.bounds.width-728.0)/2.0, self.view.bounds.height - 50, 728.0, 90.0)
-//            } else {
-//                amazonAdView = AmazonAdView(adSize: AmazonAdSize_1024x50)
-//                amazonAdView.frame = CGRectMake((self.view.bounds.width-1024.0)/2.0, self.view.bounds.height - 50, 1024.0, 50.0)
-//            }
-//            self.view.addSubview(amazonAdView)
-//            amazonAdView.delegate = nil
-//        }
-//        
-//        amazonAdView.loadAd(options)
-//    }
+ 
     func ShowAdmob()
     {
         admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
@@ -86,9 +56,10 @@ class WebDetailViewController: UIViewController  {
         {
             ShowAdmob()
         
-        }else
+        }
+        else
         {
-           // showAmazon()
+            //admobBanner.removeFromSuperview()
             AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
         }
         
@@ -122,44 +93,7 @@ class WebDetailViewController: UIViewController  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    //begin iad
-//    // 1
-//    func appdelegate() -> AppDelegate {
-//        return UIApplication.sharedApplication().delegate as AppDelegate
-//    }
-//    
-//    // 2
-//    override func viewWillAppear(animated: Bool) {
-//        var SH = UIScreen.mainScreen().bounds.height
-//        
-//        UIiAd.delegate = self
-//        UIiAd = self.appdelegate().UIiAd
-//        UIiAd.frame = CGRectMake(0, SH - 50, 0, 0)
-//        self.view.addSubview(UIiAd)
-//    }
-//    
-//    // 3
-//    override func viewWillDisappear(animated: Bool) {
-//        UIiAd.delegate = nil
-//        UIiAd.removeFromSuperview()
-//    }
-//    
-//    // 4
-//    func bannerViewDidLoadAd(banner: ADBannerView!) {
-//        UIView.beginAnimations(nil, context: nil)
-//        UIView.setAnimationDuration(1)
-//        UIiAd.alpha = 1
-//        UIView.commitAnimations()
-//    }
-//    
-//    // 5
-//    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-//        UIView.beginAnimations(nil, context: nil)
-//        UIView.setAnimationDuration(0)
-//        UIiAd.alpha = 0
-//        UIView.commitAnimations()
-//    }
-//    //end iad
+ 
     
 }
 

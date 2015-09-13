@@ -30,10 +30,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
         
         var options = AmazonAdOptions()
-        options.isTestRequest = true
+        options.isTestRequest = false
+        var x = (self.view.bounds.width - 320)/2
         
         if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
-            amazonAdView.frame = CGRectMake(0, self.view.bounds.height - 50, 320, 50)
+            amazonAdView.frame = CGRectMake(x, self.view.bounds.height - 50, 320, 50)
         } else {
             amazonAdView.removeFromSuperview()
             
