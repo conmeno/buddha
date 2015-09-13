@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         options.isTestRequest = true
         
         if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
-            amazonAdView.frame = CGRectMake(0, self.view.bounds.height - 50, 728, 50)
+            amazonAdView.frame = CGRectMake(0, self.view.bounds.height - 50, 320, 50)
         } else {
             amazonAdView.removeFromSuperview()
             
