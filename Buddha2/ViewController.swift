@@ -10,7 +10,7 @@ import UIKit
 
  
  
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate   {
+class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSource, UITableViewDelegate   {
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
         
         var options = AmazonAdOptions()
-        options.isTestRequest = false
+        options.isTestRequest = true
         var x = (self.view.bounds.width - 320)/2
         
         if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
@@ -146,7 +146,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }
     //end table view
+    // Mark: - AmazonAdViewDelegate
+    func viewControllerForPresentingModalView() -> UIViewController {
+        return self
+    }
     
+    func adViewDidLoad(view: AmazonAdView!) -> Void {
+        self.view.addSubview(amazonAdView)
+    }
+    
+    func adViewDidFailToLoad(view: AmazonAdView!, withError: AmazonAdError!) -> Void {
+        println("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription)")
+    }
+    
+    func adViewWillExpand(view: AmazonAdView!) -> Void {
+        println("Ad will expand")
+    }
+    
+    func adViewDidCollapse(view: AmazonAdView!) -> Void {
+        println("Ad has collapsed")
+    }
+
     
 
 }
