@@ -16,28 +16,31 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableView: UITableView!
     let data = Data()
     let textCellIdentifier = "TextCell"
-    
+    var timerAd:NSTimer?
    // @IBOutlet weak var fbBanner: FBAdView!
     @IBOutlet var amazonAdView: AmazonAdView!
     func showAmazon()
     {
         amazonAdView = AmazonAdView(adSize: AmazonAdSize_320x50)
         loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
-        amazonAdView.delegate = nil
+        amazonAdView.delegate = self
         self.view.addSubview(amazonAdView)
     }
+    func loadAmazon()
+    {
     
+    }
     func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
         
         var options = AmazonAdOptions()
-        options.isTestRequest = true
+        options.isTestRequest = false
         var x = (self.view.bounds.width - 320)/2
         
         if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
             amazonAdView.frame = CGRectMake(x, self.view.bounds.height - 50, 320, 50)
         } else {
             amazonAdView.removeFromSuperview()
-            
+          
             if (interfaceOrientation == UIInterfaceOrientation.Portrait) {
                 amazonAdView = AmazonAdView(adSize: AmazonAdSize_728x90)
                 amazonAdView.frame = CGRectMake((self.view.bounds.width-728.0)/2.0, self.view.bounds.height - 50, 728.0, 90.0)
@@ -46,7 +49,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
                 amazonAdView.frame = CGRectMake((self.view.bounds.width-1024.0)/2.0, self.view.bounds.height - 50, 1024.0, 50.0)
             }
             self.view.addSubview(amazonAdView)
-            amazonAdView.delegate = nil
+            amazonAdView.delegate = self
         }
         
         amazonAdView.loadAd(options)
@@ -67,9 +70,17 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
 //        AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
         
         
- 
+   self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
         
     }
+    
+    func timerMethodAutoAd(timer:NSTimer) {
+        println("auto load amazon")
+      loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
+        
+    }
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
