@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Buddha2/ViewController.swift"
-            timestampString = "465049169.611805"
+            timestampString = "465058733.232259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Foundation
  
  
 class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSource, UITableViewDelegate   {
@@ -58,6 +58,9 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
          println(getIFAddresses())
       // println(UIDevice.currentDevice().)
         // Do any additional setup after loading the view, typically from a nib.
@@ -107,6 +110,8 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         let row = indexPath.row
         let entry = data.places[row]
         cell.textLabel!.text =  entry.Name
+        //cell.textLabel!.text = getIFAddresses()[0]
+        
         cell.backgroundColor = UIColor.clearColor()
         cell.backgroundView?.alpha = 0.5
        cell.textLabel!.textColor=UIColor.blackColor()
@@ -188,7 +193,6 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     
     
     
-    
     func getIFAddresses() -> [String] {
         var addresses = [String]()
         
@@ -221,6 +225,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         
         return addresses
     }
-
+    
+    
 }
 
