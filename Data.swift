@@ -30,19 +30,74 @@ self.adType = adType
         }
     }
     //["Lời nói đầu",Thường và Vô thường,Nhân quả báo ứng cùng luật nhân quả "66 đều phật dạy", "Chú đại bi", "Mười công đức án tống kinh", "Tin tức phật giáo"]
-
+//    1. Queen Maha Maya's Dream
+//    2. The Birth of the Prince
+//    3. The Naming Ceremony
+//    4. The Prince's Education
+//    5. Prince Siddhartha's Kindness
+//    6. Prince Siddhartha's Wife
+//    7. The Four Sights: Old Age
+//    8. The Four Sights: Sickness
+//    9. The Four Sights: Death
+//    10. The Four Sights: a Monk
+//    11. The Prince Leaves Home
+//    12. King Bimbisara's Offer
+//    13. The Buddha's First Teachers
+//    14. Six Years of Searching
+//    15. The Golden Bowl
+//    16. Striving for Enlightenment
+//    17.  The Sun of Enlightenment Shines
+//    18. Seven Weeks After Enlightenment
+//    19. The First Five Monks
+//    20. The Buddha's First Teaching
+//    21. The Serpent King
+//    22. Returning Home
+//    23. The Story of Princess Yasodhara
+//    24. The Story of Prince Nanda
+//    25. The Story of Prince Rahula
+//    26. The Two Chief Disciples
+//    27. The Story of Poor Sopaka
+//    28. The Story of Lady Patacara
+//    29 . Angulimala, the Bandit
+//    30. Wakkali and the Buddha
+//    31. Sunita, the Scavenger
+//    32. The Buddha and the Sick Monk
     let places = [
-        Entry(ID: 1,NType: 1,adType: 2, Name: "Sơ lược về phật giáo", Title:"Sơ lược về phật giáo", Value: "soluoc", Icon: "icon5.png",URL: ""),
-        Entry(ID: 2,NType: 1,adType: 1, Name: "66 đều phật dạy", Title:"",Value: "66phatday", Icon: "icon2.png",URL: ""),
-        Entry(ID: 3,NType: 1,adType: 1, Name: "Chú đại bi", Title:"",Value: "chudaibi", Icon: "icon3.png",URL: ""),
-        Entry(ID: 4,NType: 1,adType: 1, Name: "Thường và Vô thường", Title:"",Value: "vothuong", Icon: "icon4.png",URL: ""),
-        Entry(ID: 4,NType: 1,adType: 1, Name: "Mười công đức án tống kinh", Title:"",Value: "10congduc", Icon: "icon9.png",URL: ""),
-        Entry(ID: 5,NType: 1,adType: 1, Name: "Nhân quả báo ứng cùng luật nhân quả", Title:"",Value: "NhanQua", Icon: "icon8.png",URL: ""),
-        Entry(ID: 5,NType: 1,adType: 1, Name: "Kinh nhân quả", Title:"",Value: "kinhnhanqua", Icon: "icon10.png",URL: ""),
-        Entry(ID: 5,NType: 2,adType: 1, Name: "Nhạc thiền", Title:"",Value: "", Icon: "icon7.png",URL: "http://vuonhoaphatgiao.com/thu-vien-audio/am-nhac/nhac-thien/"),
-        Entry(ID: 6,NType: 2,adType: 1, Name: "Vườn hoa phật giáo", Title:"",Value: "", Icon: "icon13.png",URL: "http://vuonhoaphatgiao.com/"),
-        Entry(ID: 7,NType: 2,adType: 1, Name: "Tin tức phật giáo giacngo.vn", Title:"",Value: "", Icon: "icon6.png",URL: "http://giacngo.vn"),
-Entry(ID: 8,NType: 3,adType: 1, Name: "Thank You.", Title:"",Value: "", Icon: "icon8.png",URL: "http://giacngo.vn")
+        Entry(ID: 1,NType: 1,adType: 1, Name: "1. Queen Maha Maya's Dream", Title:"1. Queen Maha Maya's Dream", Value: "1", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "2. The Birth of the Prince", Title:"2. The Birth of the Prince", Value: "2", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "3. The Naming Ceremony", Title:"3. The Naming Ceremony", Value: "3", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "4. The Prince's Education", Title:"4. The Prince's Education", Value: "4", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "5. Prince Siddhartha's Kindness", Title:"5. Prince Siddhartha's Kindness", Value: "5", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "6. Prince Siddhartha's Wife", Title:"6. Prince Siddhartha's Wife", Value: "6", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "7. The Four Sights: Old Age", Title:"7. The Four Sights: Old Age", Value: "7", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "8. The Four Sights: Sickness", Title:"8. The Four Sights: Sickness", Value: "8", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "9. The Four Sights: Death", Title:"9. The Four Sights: Death", Value: "9", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "10. The Four Sights: a Monk", Title:"10. The Four Sights: a Monk", Value: "10", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "11. The Prince Leaves Home", Title:"11. The Prince Leaves Home", Value: "11", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "12. King Bimbisara's Offer", Title:"12. King Bimbisara's Offer", Value: "12", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "13. The Buddha's First Teachers", Title:"13. The Buddha's First Teachers", Value: "13", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "14. Six Years of Searching", Title:"14. Six Years of Searching", Value: "14", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "15. The Golden Bowl", Title:"15. The Golden Bowl", Value: "15", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "16. Striving for Enlightenment", Title:"16. Striving for Enlightenment", Value: "16", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "17.  The Sun of Enlightenment Shines", Title:"17.  The Sun of Enlightenment Shines", Value: "17", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "18. Seven Weeks After Enlightenment", Title:"18. Seven Weeks After Enlightenment", Value: "18", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "19. The First Five Monks", Title:"19. The First Five Monks", Value: "19", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "20. The Buddha's First Teaching", Title:"20. The Buddha's First Teaching", Value: "10", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "21. The Serpent King", Title:"21. The Serpent King", Value: "21", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "22. Returning Home", Title:"22. Returning Home", Value: "22", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "23. The Story of Princess Yasodhara", Title:"23. The Story of Princess Yasodhara", Value: "23", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "24. The Story of Prince Nanda", Title:"24. The Story of Prince Nanda", Value: "24", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "25. The Story of Prince Rahula", Title:"25. The Story of Prince Rahula", Value: "25", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "26. The Two Chief Disciples", Title:"26. The Two Chief Disciples", Value: "26", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "27. The Story of Poor Sopaka", Title:"27. The Story of Poor Sopaka", Value: "27", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "28. The Story of Lady Patacara", Title:"28. The Story of Lady Patacara", Value: "28", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "29 . Angulimala, the Bandit", Title:"29 . Angulimala, the Bandit", Value: "29", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "30. Wakkali and the Buddha", Title:"30. Wakkali and the Buddha", Value: "30", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "31. Sunita, the Scavenger", Title:"31. Sunita, the Scavenger", Value: "31", Icon: "icon5.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "32. The Buddha and the Sick Monk", Title:"32. The Buddha and the Sick Monk", Value: "32", Icon: "icon5.png",URL: "")        
+ 
+        
+        
     ]
     
 }

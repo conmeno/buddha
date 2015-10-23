@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "965895991B21971A00D854FF"
                BuildableName = "hocphat.app"
-               BlueprintName = "hocphat"
-               ReferencedContainer = "container:hocphat.xcodeproj">
+               BlueprintName = "LifeOfTheBuddha"
+               ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,8 +30,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "965895AE1B21971B00D854FF"
                BuildableName = "hocphatTests.xctest"
-               BlueprintName = "hocphatTests"
-               ReferencedContainer = "container:hocphat.xcodeproj">
+               BlueprintName = "LifeOfTheBuddhaTests"
+               ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,8 +48,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "965895AE1B21971B00D854FF"
                BuildableName = "hocphatTests.xctest"
-               BlueprintName = "hocphatTests"
-               ReferencedContainer = "container:hocphat.xcodeproj">
+               BlueprintName = "LifeOfTheBuddhaTests"
+               ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,8 +58,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "965895991B21971A00D854FF"
             BuildableName = "hocphat.app"
-            BlueprintName = "hocphat"
-            ReferencedContainer = "container:hocphat.xcodeproj">
+            BlueprintName = "LifeOfTheBuddha"
+            ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,8 +77,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "965895991B21971A00D854FF"
             BuildableName = "hocphat.app"
-            BlueprintName = "hocphat"
-            ReferencedContainer = "container:hocphat.xcodeproj">
+            BlueprintName = "LifeOfTheBuddha"
+            ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,8 +95,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "965895991B21971A00D854FF"
             BuildableName = "hocphat.app"
-            BlueprintName = "hocphat"
-            ReferencedContainer = "container:hocphat.xcodeproj">
+            BlueprintName = "LifeOfTheBuddha"
+            ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

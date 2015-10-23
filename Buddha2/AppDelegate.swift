@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
       
         
-        AP_SDK.setupForAppPortalIdentifier("285645")
-        AmazonAdRegistration.sharedRegistration().setAppKey("ff0fa5c4c79f46d4ba358c35557b9ae6")
+        //AP_SDK.setupForAppPortalIdentifier("285645")
+        AmazonAdRegistration.sharedRegistration().setAppKey("7f8afada61384f268d9e006f18f495d8")
         AmazonAdRegistration.sharedRegistration().setLogging(true)
 
         return true

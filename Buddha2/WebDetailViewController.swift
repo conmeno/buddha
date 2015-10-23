@@ -34,15 +34,15 @@ class WebDetailViewController: UIViewController  {
 //    }
     
  
-    func ShowAdmob()
-    {
-        admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
-        admobBanner.rootViewController = self
-        var request:GADRequest = GADRequest()
-        var devices: [String] = ["ac25ecb9469dee00643c6e43651caa56", "xyze"]
-        request.testDevices = devices
-        admobBanner.loadRequest(request)
-    }
+//    func ShowAdmob()
+//    {
+//        admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
+//        admobBanner.rootViewController = self
+//        var request:GADRequest = GADRequest()
+//        var devices: [String] = ["ac25ecb9469dee00643c6e43651caa56", "xyze"]
+//        request.testDevices = devices
+//        admobBanner.loadRequest(request)
+//    }
 
 
     override func viewDidLoad() {
@@ -52,16 +52,16 @@ class WebDetailViewController: UIViewController  {
         let entry = data.places[Varialbes.Static.CurrentIndex]
         self.title = entry.Title
 
-        if(entry.adType == 1)
-        {
-            ShowAdmob()
-        
-        }
-        else
-        {
-            //admobBanner.removeFromSuperview()
-            AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
-        }
+//        if(entry.adType == 1)
+//        {
+//            ShowAdmob()
+//        
+//        }
+//        else
+//        {
+//            //admobBanner.removeFromSuperview()
+//            AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
+//        }
         
 
         if(entry.Title == "")
@@ -75,8 +75,12 @@ class WebDetailViewController: UIViewController  {
                 // use path
                 let text2 = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
                 println(text2)
+                
                 // textv1.text=text2
-                webView1.loadHTMLString(text2, baseURL: nil)
+                //NSURL *url=[[NSBundle mainBundle] bundleURL];
+                let mainB =  NSBundle.mainBundle()
+                let requestURL1 = mainB.bundleURL
+                webView1.loadHTMLString(text2, baseURL: requestURL1)
                 
             }
 
