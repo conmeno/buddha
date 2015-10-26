@@ -94,7 +94,9 @@ self.adType = adType
         Entry(ID: 1,NType: 1,adType: 1, Name: "29 . Angulimala, the Bandit", Title:"29 . Angulimala, the Bandit", Value: "29", Icon: "icon5.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "30. Wakkali and the Buddha", Title:"30. Wakkali and the Buddha", Value: "30", Icon: "icon5.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "31. Sunita, the Scavenger", Title:"31. Sunita, the Scavenger", Value: "31", Icon: "icon5.png",URL: ""),
-        Entry(ID: 1,NType: 1,adType: 1, Name: "32. The Buddha and the Sick Monk", Title:"32. The Buddha and the Sick Monk", Value: "32", Icon: "icon5.png",URL: "")        
+        Entry(ID: 1,NType: 1,adType: 1, Name: "32. The Buddha and the Sick Monk", Title:"32. The Buddha and the Sick Monk", Value: "32", Icon: "icon5.png",URL: ""),
+        
+        Entry(ID: 1,NType: 1,adType: 1, Name: "33. Pictures", Title:"33. Pictures", Value: "33", Icon: "icon5.png",URL: "")
  
         
         
