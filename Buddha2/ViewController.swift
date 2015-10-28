@@ -25,13 +25,15 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
         amazonAdView.delegate = self
         self.view.addSubview(amazonAdView)
+        amazonAdView.alpha = 0.0
     }
     func loadAmazon()
     {
     
     }
     func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
-        
+        amazonAdView.hidden = true
+
         var options = AmazonAdOptions()
         options.isTestRequest = false
         var x = (self.view.bounds.width - 320)/2
@@ -53,18 +55,20 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         }
         
         amazonAdView.loadAd(options)
-    }
+           }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var abc = Test()
+        var a = abc.isVPNConnected()
+        println(a)
         
         
-        
-         println(getIFAddresses())
+         //println(getIFAddresses())
       // println(UIDevice.currentDevice().)
         // Do any additional setup after loading the view, typically from a nib.
-        showAmazon()
+       // showAmazon()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
@@ -114,7 +118,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         
         cell.backgroundColor = UIColor.clearColor()
         cell.backgroundView?.alpha = 0.5
-       cell.textLabel!.textColor=UIColor.blackColor()
+       cell.textLabel!.textColor=UIColor.whiteColor()
         let image = UIImage(named: entry.Icon)
         cell.imageView!.image = image
         
@@ -172,11 +176,14 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     
     func adViewDidLoad(view: AmazonAdView!) -> Void {
         self.view.addSubview(amazonAdView)
-        
+        //amazonAdView.hidden = false
     }
     
     func adViewDidFailToLoad(view: AmazonAdView!, withError: AmazonAdError!) -> Void {
         println("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription)")
+        amazonAdView.hidden = true
+        amazonAdView.removeFromSuperview()
+
     }
     
     func adViewWillExpand(view: AmazonAdView!) -> Void {
@@ -188,14 +195,29 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     }
 
     
-    
-    
-    
+//    func isVPNConnected() -> Bool {
+//        var interfaces: UnsafeMutablePointer<ifaddrs> = nil
+//        var temp_addr: UnsafeMutablePointer<ifaddrs> = nil
+//        var success = getifaddrs(&interfaces)
+//        if success == 0 {
+//            temp_addr = interfaces
+//            while temp_addr != nil {
+//                var string: String = temp_addr.ge "\(temp_addr,->ifa_name)"
+//                if string.rangeOfString("tap").location != NSNotFound || string.rangeOfString("tun").location != NSNotFound || string.rangeOfString("ppp").location != NSNotFound {
+//                    return true
+//                }
+//                temp_addr = temp_addr->ifa_next
+//            }
+//        }
+//        freeifaddrs(interfaces)
+//        return false
+//    }
+ 
     
     
     func getIFAddresses() -> [String] {
         var addresses = [String]()
-        
+     
         // Get list of all interfaces on the local machine:
         var ifaddr : UnsafeMutablePointer<ifaddrs> = nil
         if getifaddrs(&ifaddr) == 0 {

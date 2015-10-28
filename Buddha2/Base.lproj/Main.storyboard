@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Học Phật-->
+        <!--Life Of The Buddha-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hocphat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LifeOfTheBuddha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b1.png" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-Xa-She">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LifeBuddha.png" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-Xa-She">
+                                <rect key="frame" x="0.0" y="50" width="600" height="550"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1o-ZA-fyj">
@@ -40,7 +40,7 @@
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9dj-PF-0hl">
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="icon3.png" id="qhV-Js-zDX">
@@ -127,7 +127,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="aAc-bH-7yO" secondAttribute="centerX" id="6w2-cZ-JOv"/>
                             <constraint firstAttribute="bottomMargin" secondItem="SYY-Xa-She" secondAttribute="bottom" id="Bgj-sy-bRe"/>
@@ -147,7 +147,7 @@
                             <constraint firstItem="y1o-ZA-fyj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="cOj-vh-U29"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SYY-Xa-She" secondAttribute="bottom" id="fde-1f-XpO"/>
                             <constraint firstItem="y1o-ZA-fyj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="l1W-Fl-zLe"/>
-                            <constraint firstItem="SYY-Xa-She" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="pKn-FV-sV6"/>
+                            <constraint firstItem="SYY-Xa-She" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="pKn-FV-sV6"/>
                             <constraint firstItem="SYY-Xa-She" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="tir-oa-e8R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y1o-ZA-fyj" secondAttribute="bottom" id="uS5-uP-Bcr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y1o-ZA-fyj" secondAttribute="trailing" constant="-16" id="vfl-9C-9uP"/>
@@ -159,24 +159,24 @@
                                 <exclude reference="y1o-ZA-fyj"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Nd9-89-647"/>
+                                <exclude reference="UNw-Tw-IQp"/>
                                 <exclude reference="Bm6-OU-yY2"/>
                                 <exclude reference="Cf6-zF-kcX"/>
                                 <exclude reference="Hcl-ah-rJs"/>
                                 <exclude reference="NgN-VF-Sa3"/>
                                 <exclude reference="SpY-MX-guU"/>
                                 <exclude reference="tir-oa-e8R"/>
-                                <exclude reference="Nd9-89-647"/>
-                                <exclude reference="UNw-Tw-IQp"/>
-                                <exclude reference="cOj-vh-U29"/>
-                                <exclude reference="l1W-Fl-zLe"/>
-                                <exclude reference="vfl-9C-9uP"/>
-                                <exclude reference="zAH-re-tvw"/>
                                 <exclude reference="6w2-cZ-JOv"/>
                                 <exclude reference="R9z-Ff-CaZ"/>
                                 <exclude reference="cJT-oW-i1S"/>
                                 <exclude reference="fde-1f-XpO"/>
                                 <exclude reference="uS5-uP-Bcr"/>
                                 <exclude reference="yfP-Wm-Kfw"/>
+                                <exclude reference="cOj-vh-U29"/>
+                                <exclude reference="l1W-Fl-zLe"/>
+                                <exclude reference="vfl-9C-9uP"/>
+                                <exclude reference="zAH-re-tvw"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -185,14 +185,14 @@
                                 <include reference="y1o-ZA-fyj"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="UNw-Tw-IQp"/>
                                 <include reference="Cf6-zF-kcX"/>
                                 <include reference="Hcl-ah-rJs"/>
                                 <include reference="NgN-VF-Sa3"/>
-                                <include reference="UNw-Tw-IQp"/>
-                                <include reference="l1W-Fl-zLe"/>
-                                <include reference="zAH-re-tvw"/>
                                 <include reference="R9z-Ff-CaZ"/>
                                 <include reference="uS5-uP-Bcr"/>
+                                <include reference="l1W-Fl-zLe"/>
+                                <include reference="zAH-re-tvw"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -200,22 +200,22 @@
                                 <include reference="y1o-ZA-fyj"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Nd9-89-647"/>
                                 <include reference="Bm6-OU-yY2"/>
                                 <include reference="SpY-MX-guU"/>
                                 <include reference="tir-oa-e8R"/>
-                                <include reference="Nd9-89-647"/>
-                                <include reference="cOj-vh-U29"/>
-                                <include reference="vfl-9C-9uP"/>
                                 <include reference="6w2-cZ-JOv"/>
                                 <exclude reference="Sbx-oc-aNE"/>
                                 <exclude reference="Qfd-DU-S3Q"/>
                                 <include reference="cJT-oW-i1S"/>
                                 <include reference="fde-1f-XpO"/>
                                 <include reference="yfP-Wm-Kfw"/>
+                                <include reference="cOj-vh-U29"/>
+                                <include reference="vfl-9C-9uP"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Học Phật" id="JYc-uM-DDL">
+                    <navigationItem key="navigationItem" title="Life Of The Buddha" id="JYc-uM-DDL">
                         <barButtonItem key="backBarButtonItem" title="Back" id="guc-Ri-FZD"/>
                     </navigationItem>
                     <connections>
@@ -230,7 +230,7 @@
         <!--Detail View Controller-->
         <scene sceneID="3Ny-9o-MhS">
             <objects>
-                <viewController storyboardIdentifier="myDetailView1" id="8XQ-mV-E8r" customClass="DetailViewController" customModule="hocphat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myDetailView1" id="8XQ-mV-E8r" customClass="DetailViewController" customModule="LifeOfTheBuddha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yd9-Ax-ful"/>
                         <viewControllerLayoutGuide type="bottom" id="6dB-rQ-bTC"/>
@@ -415,7 +415,7 @@
         <!--web title-->
         <scene sceneID="vgO-St-2vo">
             <objects>
-                <viewController storyboardIdentifier="webDetail" id="Mae-38-XSa" customClass="WebDetailViewController" customModule="hocphat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webDetail" id="Mae-38-XSa" customClass="WebDetailViewController" customModule="LifeOfTheBuddha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PFJ-cW-Ihn"/>
                         <viewControllerLayoutGuide type="bottom" id="qj4-K4-ouD"/>
@@ -582,7 +582,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="b1.png" width="800" height="1280"/>
+        <image name="LifeBuddha.png" width="1024" height="1024"/>
         <image name="icon3.png" width="150" height="150"/>
     </resources>
 </document>

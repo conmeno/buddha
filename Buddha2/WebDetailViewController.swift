@@ -34,15 +34,15 @@ class WebDetailViewController: UIViewController  {
 //    }
     
  
-//    func ShowAdmob()
-//    {
-//        admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
-//        admobBanner.rootViewController = self
-//        var request:GADRequest = GADRequest()
-//        var devices: [String] = ["ac25ecb9469dee00643c6e43651caa56", "xyze"]
-//        request.testDevices = devices
-//        admobBanner.loadRequest(request)
-//    }
+    func ShowAdmob()
+    {
+        admobBanner.adUnitID = "ca-app-pub-7800586925586997/3745298867"
+        admobBanner.rootViewController = self
+        var request:GADRequest = GADRequest()
+        var devices: [String] = ["985ffa73bbf2cdecd9af51e48b1a222b", "xyze"]
+        request.testDevices = devices
+        admobBanner.loadRequest(request)
+    }
 
 
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class WebDetailViewController: UIViewController  {
         
         let entry = data.places[Varialbes.Static.CurrentIndex]
         self.title = entry.Title
-
+        ShowAdmob()
 //        if(entry.adType == 1)
 //        {
 //            ShowAdmob()
