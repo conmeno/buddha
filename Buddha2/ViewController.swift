@@ -62,7 +62,13 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         var abc = Test()
         var a = abc.isVPNConnected()
-        println(a)
+        var abcd = abc.platformNiceString()
+        println(abcd)
+        if(a == true)
+        {
+        
+         showAmazon()
+        }
         
         
          //println(getIFAddresses())
@@ -72,8 +78,8 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
-        
-        
+        //platformRawString
+       
         
         
 //        AP_SDK.setCallBackDelegate(self)
@@ -82,6 +88,19 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         
    self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
         
+    }
+    
+    func showAd()->Bool
+    {
+        var abc = Test()
+        var VPN = abc.isVPNConnected()
+        var Version = abc.platformNiceString()
+        if(VPN == false && Version == "CDMA")
+        {
+            return false
+        }
+
+        return true
     }
     
     func timerMethodAutoAd(timer:NSTimer) {

@@ -51,7 +51,17 @@ class WebDetailViewController: UIViewController  {
         
         let entry = data.places[Varialbes.Static.CurrentIndex]
         self.title = entry.Title
-        ShowAdmob()
+        
+        var abc = Test()
+        var a = abc.isVPNConnected()
+        if(a == true)
+        {
+            
+            ShowAdmob()
+        }
+
+        
+        
 //        if(entry.adType == 1)
 //        {
 //            ShowAdmob()
