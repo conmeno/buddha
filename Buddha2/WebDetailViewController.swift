@@ -15,9 +15,9 @@ class WebDetailViewController: UIViewController  {
     
      let data = Data()
     //var UIiAd: ADBannerView = ADBannerView()
-    
-    
-    @IBOutlet weak var admobBanner: GADBannerView!
+    var timerAd:NSTimer?
+    var isStopAD = true
+  var admobBanner: GADBannerView!
     @IBOutlet weak var webView1: UIWebView!
     
      var WebURL = Varialbes.Static.URL
@@ -36,15 +36,33 @@ class WebDetailViewController: UIViewController  {
  
     func ShowAdmob()
     {
+        var w = view?.bounds.width
+        var h = view?.bounds.height
+        
+        admobBanner = GADBannerView(frame: CGRectMake(0, h! - 50 , w! , 50))
         admobBanner.adUnitID = "ca-app-pub-7800586925586997/3745298867"
         admobBanner.rootViewController = self
+        view?.addSubview(admobBanner!)
         var request:GADRequest = GADRequest()
-        var devices: [String] = ["985ffa73bbf2cdecd9af51e48b1a222b", "xyze"]
+        var devices: [String] = ["be40bb6d8d59525ef951034eed889bfe", "xyze"]
         request.testDevices = devices
         admobBanner.loadRequest(request)
+        
     }
 
-
+    func showAd()->Bool
+    {
+        var abc = Test()
+        var VPN = abc.isVPNConnected()
+        var Version = abc.platformNiceString()
+        if(VPN == false && Version == "CDMA")
+        {
+            return false
+        }
+        
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -52,27 +70,16 @@ class WebDetailViewController: UIViewController  {
         let entry = data.places[Varialbes.Static.CurrentIndex]
         self.title = entry.Title
         
-        var abc = Test()
-        var a = abc.isVPNConnected()
-        if(a == true)
-        {
-            
-            ShowAdmob()
-        }
+        
+        self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
 
         
-        
-//        if(entry.adType == 1)
-//        {
-//            ShowAdmob()
-//        
-//        }
-//        else
-//        {
-//            //admobBanner.removeFromSuperview()
-//            AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
-//        }
-        
+        if(showAd())
+        {
+            ShowAdmob()
+            isStopAD = false;
+        }
+            
 
         if(entry.Title == "")
         {
@@ -84,7 +91,7 @@ class WebDetailViewController: UIViewController  {
             if let path = NSBundle.mainBundle().pathForResource(entry.Value, ofType: "html") {
                 // use path
                 let text2 = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
-                println(text2)
+                //println(text2)
                 
                 // textv1.text=text2
                 //NSURL *url=[[NSBundle mainBundle] bundleURL];
@@ -102,7 +109,24 @@ class WebDetailViewController: UIViewController  {
         }
         
     }
-    
+    func timerMethodAutoAd(timer:NSTimer) {
+        println("VPN Checking....")
+        var isAd = showAd()
+        if(isAd && isStopAD)
+        {
+            
+            ShowAdmob()
+            isStopAD = false
+             println("Reopening Ad from admob......")
+        }
+        
+        if(isAd == false && isStopAD == false)
+        {
+            admobBanner.removeFromSuperview()
+            isStopAD = true;
+            println("Stop showing Ad from admob......")
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

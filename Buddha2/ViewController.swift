@@ -60,30 +60,16 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var abc = Test()
-        var a = abc.isVPNConnected()
-        var abcd = abc.platformNiceString()
-        println(abcd)
-        if(a == true)
-        {
-        
-         showAmazon()
-        }
+       amazonAdView.alpha = 0.0
+
+        showAmazon()
         
         
-         //println(getIFAddresses())
-      // println(UIDevice.currentDevice().)
-        // Do any additional setup after loading the view, typically from a nib.
-       // showAmazon()
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
-        //platformRawString
-       
         
-        
-//        AP_SDK.setCallBackDelegate(self)
-//        AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
         
         
    self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
@@ -183,7 +169,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         else
         {
         
-        //self.navigationController?.pushViewController(initialViewController, animated: true)
+        self.navigationController?.pushViewController(initialViewController, animated: true)
         }
 
     }
@@ -195,6 +181,8 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     
     func adViewDidLoad(view: AmazonAdView!) -> Void {
         self.view.addSubview(amazonAdView)
+        amazonAdView.hidden = false
+        amazonAdView.alpha  = 1.0
         //amazonAdView.hidden = false
     }
     
@@ -214,23 +202,6 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     }
 
     
-//    func isVPNConnected() -> Bool {
-//        var interfaces: UnsafeMutablePointer<ifaddrs> = nil
-//        var temp_addr: UnsafeMutablePointer<ifaddrs> = nil
-//        var success = getifaddrs(&interfaces)
-//        if success == 0 {
-//            temp_addr = interfaces
-//            while temp_addr != nil {
-//                var string: String = temp_addr.ge "\(temp_addr,->ifa_name)"
-//                if string.rangeOfString("tap").location != NSNotFound || string.rangeOfString("tun").location != NSNotFound || string.rangeOfString("ppp").location != NSNotFound {
-//                    return true
-//                }
-//                temp_addr = temp_addr->ifa_next
-//            }
-//        }
-//        freeifaddrs(interfaces)
-//        return false
-//    }
  
     
     
