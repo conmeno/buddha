@@ -125,7 +125,6 @@
 		84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EC1B8D797300426D60 /* CoreMedia.framework */; };
 		84A6B3EF1B8D797D00426D60 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EE1B8D797D00426D60 /* libc++.dylib */; };
 		84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3F01B8D798300426D60 /* MediaPlayer.framework */; };
-		84A880E71B99868100354A36 /* libAP_SDK-1.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880E61B99868100354A36 /* libAP_SDK-1.4.a */; };
 		84A880EB1B9988C800354A36 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880EA1B9988C800354A36 /* WebKit.framework */; };
 		84A880ED1B9988D700354A36 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880EC1B9988D700354A36 /* MessageUI.framework */; };
 		84A880EF1B9988E300354A36 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880EE1B9988E300354A36 /* ImageIO.framework */; };
@@ -139,7 +138,6 @@
 		84AC08821BE0A65D00A850A5 /* icon33.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC087D1BE0A65D00A850A5 /* icon33.png */; };
 		84AC08831BE0A65D00A850A5 /* icon34.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC087E1BE0A65D00A850A5 /* icon34.png */; };
 		84AC08851BE0C6A100A850A5 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AC08841BE0C6A100A850A5 /* Test.m */; };
-		960FF70E1B3B981F0054CE79 /* b1.png in Resources */ = {isa = PBXBuildFile; fileRef = 960FF70D1B3B981F0054CE79 /* b1.png */; };
 		965895A01B21971A00D854FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658959F1B21971A00D854FF /* AppDelegate.swift */; };
 		965895A21B21971A00D854FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895A11B21971A00D854FF /* ViewController.swift */; };
 		965895A51B21971A00D854FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965895A31B21971A00D854FF /* Main.storyboard */; };
@@ -150,13 +148,6 @@
 		965895C71B26BD1E00D854FF /* WebDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895C61B26BD1E00D854FF /* WebDetailViewController.swift */; };
 		965895C91B26BE4600D854FF /* Varialbes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895C81B26BE4600D854FF /* Varialbes.swift */; };
 		965895CB1B26D3D200D854FF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895CA1B26D3D200D854FF /* Data.swift */; };
-		96ECAE401B2A8C3500551B52 /* vothuong.html in Resources */ = {isa = PBXBuildFile; fileRef = 96ECAE3F1B2A8C3500551B52 /* vothuong.html */; };
-		96F3BA401B294E200004B7E3 /* NhanQua.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F3BA3F1B294E200004B7E3 /* NhanQua.html */; };
-		96F3BA451B2953990004B7E3 /* chudaibi.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F3BA431B2953990004B7E3 /* chudaibi.html */; };
-		96F3BA461B2953990004B7E3 /* kinhnhanqua.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F3BA441B2953990004B7E3 /* kinhnhanqua.html */; };
-		96F3BA511B297D630004B7E3 /* 10congduc.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F3BA4E1B297D630004B7E3 /* 10congduc.html */; };
-		96F3BA521B297D630004B7E3 /* 66phatday.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F3BA4F1B297D630004B7E3 /* 66phatday.html */; };
-		96F3BA531B297D630004B7E3 /* soluoc.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F3BA501B297D630004B7E3 /* soluoc.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,10 +280,6 @@
 		84A6B3EC1B8D797300426D60 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		84A6B3EE1B8D797D00426D60 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		84A6B3F01B8D798300426D60 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		84A880E31B99868100354A36 /* AP_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AP_SDK.h; sourceTree = "<group>"; };
-		84A880E41B99868100354A36 /* APCallBackDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCallBackDelegate.h; sourceTree = "<group>"; };
-		84A880E51B99868100354A36 /* APMediationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMediationDelegate.h; sourceTree = "<group>"; };
-		84A880E61B99868100354A36 /* libAP_SDK-1.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libAP_SDK-1.4.a"; sourceTree = "<group>"; };
 		84A880EA1B9988C800354A36 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		84A880EC1B9988D700354A36 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		84A880EE1B9988E300354A36 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -307,7 +294,6 @@
 		84AC087E1BE0A65D00A850A5 /* icon34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon34.png; path = icons/icon34.png; sourceTree = "<group>"; };
 		84AC08841BE0C6A100A850A5 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		84AC08861BE0C84700A850A5 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		960FF70D1B3B981F0054CE79 /* b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b1.png; path = myfiles/b1.png; sourceTree = "<group>"; };
 		9658959A1B21971A00D854FF /* LifeOfTheBuddha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeOfTheBuddha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658959E1B21971A00D854FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9658959F1B21971A00D854FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -322,13 +308,6 @@
 		965895C61B26BD1E00D854FF /* WebDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebDetailViewController.swift; sourceTree = "<group>"; };
 		965895C81B26BE4600D854FF /* Varialbes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Varialbes.swift; sourceTree = "<group>"; };
 		965895CA1B26D3D200D854FF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		96ECAE3F1B2A8C3500551B52 /* vothuong.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = vothuong.html; path = myfiles/vothuong.html; sourceTree = "<group>"; };
-		96F3BA3F1B294E200004B7E3 /* NhanQua.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = NhanQua.html; path = myfiles/NhanQua.html; sourceTree = "<group>"; };
-		96F3BA431B2953990004B7E3 /* chudaibi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = chudaibi.html; path = myfiles/chudaibi.html; sourceTree = "<group>"; };
-		96F3BA441B2953990004B7E3 /* kinhnhanqua.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = kinhnhanqua.html; path = myfiles/kinhnhanqua.html; sourceTree = "<group>"; };
-		96F3BA4E1B297D630004B7E3 /* 10congduc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = 10congduc.html; path = myfiles/10congduc.html; sourceTree = "<group>"; };
-		96F3BA4F1B297D630004B7E3 /* 66phatday.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = 66phatday.html; path = myfiles/66phatday.html; sourceTree = "<group>"; };
-		96F3BA501B297D630004B7E3 /* soluoc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = soluoc.html; path = myfiles/soluoc.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,7 +336,6 @@
 				84A6B3E11B8D794900426D60 /* CoreMotion.framework in Frameworks */,
 				84A6B3DF1B8D793F00426D60 /* AdSupport.framework in Frameworks */,
 				84A6B3DD1B8D793A00426D60 /* Foundation.framework in Frameworks */,
-				84A880E71B99868100354A36 /* libAP_SDK-1.4.a in Frameworks */,
 				84A6B3DB1B8D793400426D60 /* CoreGraphics.framework in Frameworks */,
 				84A6B3D91B8D792D00426D60 /* UIKit.framework in Frameworks */,
 				84A599201B5CCEFB00123092 /* GoogleMobileAds.framework in Frameworks */,
@@ -501,17 +479,6 @@
 			name = BuddhaLife;
 			sourceTree = "<group>";
 		};
-		84A880E21B99868100354A36 /* Airpush_iOS_SDK_V1.4 */ = {
-			isa = PBXGroup;
-			children = (
-				84A880E31B99868100354A36 /* AP_SDK.h */,
-				84A880E41B99868100354A36 /* APCallBackDelegate.h */,
-				84A880E51B99868100354A36 /* APMediationDelegate.h */,
-				84A880E61B99868100354A36 /* libAP_SDK-1.4.a */,
-			);
-			path = Airpush_iOS_SDK_V1.4;
-			sourceTree = "<group>";
-		};
 		965895911B21971A00D854FF = {
 			isa = PBXGroup;
 			children = (
@@ -527,7 +494,6 @@
 				84A880EE1B9988E300354A36 /* ImageIO.framework */,
 				84A880EC1B9988D700354A36 /* MessageUI.framework */,
 				84A880EA1B9988C800354A36 /* WebKit.framework */,
-				84A880E21B99868100354A36 /* Airpush_iOS_SDK_V1.4 */,
 				84A6B3F01B8D798300426D60 /* MediaPlayer.framework */,
 				84A6B3EE1B8D797D00426D60 /* libc++.dylib */,
 				84A6B3EC1B8D797300426D60 /* CoreMedia.framework */,
@@ -566,9 +532,7 @@
 				84A3F7001BDF65370062C2AB /* icons */,
 				84A38E1F1BDE140500795F54 /* images */,
 				84A4E3011BD9EDE40036EAA3 /* BuddhaLife */,
-				96F3BA4D1B2977F60004B7E3 /* html */,
 				965895C41B21AA5400D854FF /* DetailViewController.swift */,
-				965895C11B21A47700D854FF /* img */,
 				9658959F1B21971A00D854FF /* AppDelegate.swift */,
 				965895A11B21971A00D854FF /* ViewController.swift */,
 				965895A31B21971A00D854FF /* Main.storyboard */,
@@ -603,28 +567,6 @@
 				965895B41B21971B00D854FF /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		965895C11B21A47700D854FF /* img */ = {
-			isa = PBXGroup;
-			children = (
-				960FF70D1B3B981F0054CE79 /* b1.png */,
-			);
-			name = img;
-			sourceTree = "<group>";
-		};
-		96F3BA4D1B2977F60004B7E3 /* html */ = {
-			isa = PBXGroup;
-			children = (
-				96ECAE3F1B2A8C3500551B52 /* vothuong.html */,
-				96F3BA4E1B297D630004B7E3 /* 10congduc.html */,
-				96F3BA4F1B297D630004B7E3 /* 66phatday.html */,
-				96F3BA501B297D630004B7E3 /* soluoc.html */,
-				96F3BA431B2953990004B7E3 /* chudaibi.html */,
-				96F3BA441B2953990004B7E3 /* kinhnhanqua.html */,
-				96F3BA3F1B294E200004B7E3 /* NhanQua.html */,
-			);
-			name = html;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -723,7 +665,6 @@
 				84A4E32F1BD9EDF80036EAA3 /* 13.html in Resources */,
 				84A3F7351BE07A3C0062C2AB /* icon25.png in Resources */,
 				84A38E631BDE141A00795F54 /* p33.jpg in Resources */,
-				96ECAE401B2A8C3500551B52 /* vothuong.html in Resources */,
 				84A4E32A1BD9EDF80036EAA3 /* 8.html in Resources */,
 				84A4E3381BD9EDF80036EAA3 /* 22.html in Resources */,
 				84A38E431BDE141A00795F54 /* p1.jpg in Resources */,
@@ -733,14 +674,11 @@
 				84A3F7361BE07A3C0062C2AB /* icon26.png in Resources */,
 				84A3F7341BE07A3C0062C2AB /* icon24.png in Resources */,
 				84A38E591BDE141A00795F54 /* p23.jpg in Resources */,
-				96F3BA511B297D630004B7E3 /* 10congduc.html in Resources */,
 				84AC08791BE09D8800A850A5 /* LifeBuddha.png in Resources */,
-				96F3BA461B2953990004B7E3 /* kinhnhanqua.html in Resources */,
 				84A3F71E1BE07A3C0062C2AB /* icon1.png in Resources */,
 				84A3F72E1BE07A3C0062C2AB /* icon18.png in Resources */,
 				84A3F72F1BE07A3C0062C2AB /* icon19.png in Resources */,
 				84A38E611BDE141A00795F54 /* p31.jpg in Resources */,
-				96F3BA531B297D630004B7E3 /* soluoc.html in Resources */,
 				84A4E32C1BD9EDF80036EAA3 /* 10.html in Resources */,
 				84A38E5B1BDE141A00795F54 /* p25.jpg in Resources */,
 				84A3F7261BE07A3C0062C2AB /* icon9.png in Resources */,
@@ -752,7 +690,6 @@
 				84A3F7321BE07A3C0062C2AB /* icon22.png in Resources */,
 				84A38E5D1BDE141A00795F54 /* p27.jpg in Resources */,
 				84A3F7241BE07A3C0062C2AB /* icon7.png in Resources */,
-				96F3BA521B297D630004B7E3 /* 66phatday.html in Resources */,
 				965895AA1B21971A00D854FF /* LaunchScreen.xib in Resources */,
 				84A3F7371BE07A3C0062C2AB /* icon27.png in Resources */,
 				84A4E3241BD9EDF80036EAA3 /* 2.html in Resources */,
@@ -787,14 +724,11 @@
 				84A3F7221BE07A3C0062C2AB /* icon5.png in Resources */,
 				965895A71B21971A00D854FF /* Images.xcassets in Resources */,
 				84A38E571BDE141A00795F54 /* p21.jpg in Resources */,
-				96F3BA401B294E200004B7E3 /* NhanQua.html in Resources */,
 				84A3F7281BE07A3C0062C2AB /* icon11.png in Resources */,
 				84A38E541BDE141A00795F54 /* p18.jpg in Resources */,
 				84A4E3301BD9EDF80036EAA3 /* 14.html in Resources */,
 				84A3F7311BE07A3C0062C2AB /* icon21.png in Resources */,
 				84A3F73A1BE07A3C0062C2AB /* icon30.png in Resources */,
-				960FF70E1B3B981F0054CE79 /* b1.png in Resources */,
-				96F3BA451B2953990004B7E3 /* chudaibi.html in Resources */,
 				84A3F7271BE07A3C0062C2AB /* icon10.png in Resources */,
 				84A38E581BDE141A00795F54 /* p22.jpg in Resources */,
 				84AC08811BE0A65D00A850A5 /* icon32.png in Resources */,
@@ -983,10 +917,7 @@
 				INFOPLIST_FILE = Buddha2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Airpush_iOS_SDK_V1.4",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = LifeOfTheBuddha;
 				PROVISIONING_PROFILE = "";
@@ -1008,10 +939,7 @@
 				INFOPLIST_FILE = Buddha2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Airpush_iOS_SDK_V1.4",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = LifeOfTheBuddha;
 				PROVISIONING_PROFILE = "";

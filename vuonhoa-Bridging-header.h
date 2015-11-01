@@ -16,7 +16,7 @@
 #import <AmazonAd/AmazonAdError.h>
 #import <AmazonAd/AmazonAdOptions.h>
 
-#import "AP_SDK.h"
+//#import "AP_SDK.h"
 #include <ifaddrs.h>
 #import "Test.h"
 #ifndef vuonhoaphatgiao_vuonhoa_Bridging_header_h
