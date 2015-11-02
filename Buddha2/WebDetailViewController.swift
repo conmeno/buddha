@@ -15,31 +15,27 @@ class WebDetailViewController: UIViewController  {
     
      let data = Data()
     //var UIiAd: ADBannerView = ADBannerView()
+    var timerVPN:NSTimer?
+    var isStopAD = true
+
     
-    
-    @IBOutlet weak var admobBanner: GADBannerView!
+    var admobBanner: GADBannerView!
     @IBOutlet weak var webView1: UIWebView!
     
      var WebURL = Varialbes.Static.URL
-
-//    func ShowFB()
-//    {
-//        var fbBanner: FBAdView = FBAdView(placementID:"1641295566086832_1641943026022086", adSize:kFBAdSize320x50, rootViewController:self)
-//        fbBanner.delegate = self
-// 
-//        FBAdSettings.addTestDevice("96f1b863a45b29921976b97a6aa858812ac828ee")
-//        fbBanner.loadAd()
-//        fbBanner.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: 320, height: 90)
-//        self.view.addSubview(fbBanner)
-//    }
-    
- 
     func ShowAdmob()
     {
+        var w = view?.bounds.width
+        var h = view?.bounds.height
+        
+        admobBanner = GADBannerView(frame: CGRectMake(0, h! - 50 , w! , 50))
         admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
         admobBanner.rootViewController = self
+        
+        self.view.addSubview(admobBanner)
+        
         var request:GADRequest = GADRequest()
-        var devices: [String] = ["ac25ecb9469dee00643c6e43651caa56", "xyze"]
+        var devices: [String] = ["715d5ab6b7e6804793f5dec9515d0a17", "xyze"]
         request.testDevices = devices
         admobBanner.loadRequest(request)
     }
@@ -52,16 +48,27 @@ class WebDetailViewController: UIViewController  {
         let entry = data.places[Varialbes.Static.CurrentIndex]
         self.title = entry.Title
 
-        if(entry.adType == 1)
+        self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
+        
+        
+        if(showAd())
         {
             ShowAdmob()
+            isStopAD = false
+        }
         
-        }
-        else
-        {
-            //admobBanner.removeFromSuperview()
-            AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
-        }
+        
+//        
+//        if(entry.adType == 1)
+//        {
+//            ShowAdmob()
+//        
+//        }
+//        else
+//        {
+//            //admobBanner.removeFromSuperview()
+//            AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
+//        }
         
 
         if(entry.Title == "")
@@ -74,7 +81,7 @@ class WebDetailViewController: UIViewController  {
             if let path = NSBundle.mainBundle().pathForResource(entry.Value, ofType: "html") {
                 // use path
                 let text2 = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
-                println(text2)
+                //println(text2)
                 // textv1.text=text2
                 webView1.loadHTMLString(text2, baseURL: nil)
                 
@@ -93,6 +100,42 @@ class WebDetailViewController: UIViewController  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func showAd()->Bool
+    {
+        var abc = Test()
+        var VPN = abc.isVPNConnected()
+        var Version = abc.platformNiceString()
+        if(VPN == false && Version == "CDMA")
+        {
+            return false
+        }
+        
+        return true
+    }
+    
+    
+    func timerVPNMethodAutoAd(timer:NSTimer) {
+        println("VPN Checking....")
+        var isAd = showAd()
+        if(isAd && isStopAD)
+        {
+            
+            ShowAdmob()
+            isStopAD = false
+            println("Reopening Ad from admob......")
+        }
+        
+        if(isAd == false && isStopAD == false)
+        {
+            admobBanner.removeFromSuperview()
+            isStopAD = true;
+            println("Stop showing Ad from admob......")
+        }
+    }
+
+
  
     
 }
