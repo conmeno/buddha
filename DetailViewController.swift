@@ -21,8 +21,8 @@ class DetailViewController: UIViewController,ADBannerViewDelegate  {
         let file = "chudaibi"
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "html") {
             // use path
-            let text2 = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
-            println(text2)
+            let text2 = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+            print(text2)
             textv1.text=text2
 
             
@@ -41,12 +41,12 @@ class DetailViewController: UIViewController,ADBannerViewDelegate  {
     //begin iad
     // 1
     func appdelegate() -> AppDelegate {
-        return UIApplication.sharedApplication().delegate as AppDelegate
+        return UIApplication.sharedApplication().delegate as! AppDelegate
     }
     
     // 2
     override func viewWillAppear(animated: Bool) {
-        var SH = UIScreen.mainScreen().bounds.height
+        let SH = UIScreen.mainScreen().bounds.height
         
         UIiAd.delegate = self
         UIiAd = self.appdelegate().UIiAd

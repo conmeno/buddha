@@ -32,9 +32,9 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     }
     func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
         
-        var options = AmazonAdOptions()
+        let options = AmazonAdOptions()
         options.isTestRequest = false
-        var x = (self.view.bounds.width - 320)/2
+        let x = (self.view.bounds.width - 320)/2
         
         if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
             amazonAdView.frame = CGRectMake(x, self.view.bounds.height - 50, 320, 50)
@@ -61,7 +61,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         
         
         
-         println(getIFAddresses())
+         //print(getIFAddresses())
       // println(UIDevice.currentDevice().)
         // Do any additional setup after loading the view, typically from a nib.
         showAmazon()
@@ -81,7 +81,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     }
     
     func timerMethodAutoAd(timer:NSTimer) {
-        println("auto load amazon")
+        print("auto load amazon")
       loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
         
     }
@@ -136,9 +136,9 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         //
         //performSegueWithIdentifier("myDetailView1", sender: nil)
         
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("myDetailView1") as UIViewController
+        _ = storyboard.instantiateViewControllerWithIdentifier("myDetailView1") as UIViewController
                  //presentViewController(initialViewController, animated: true, completion: nil)
         
         //self.window?.rootViewController = initialViewController
@@ -151,7 +151,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         {
             Varialbes.Static.CurrentIndex = row
             
-            var WebDetailView = storyboard.instantiateViewControllerWithIdentifier("webDetail") as UIViewController
+            let WebDetailView = storyboard.instantiateViewControllerWithIdentifier("webDetail") as UIViewController
             
             
             self.navigationController?.pushViewController(WebDetailView, animated: true)
@@ -176,15 +176,15 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     }
     
     func adViewDidFailToLoad(view: AmazonAdView!, withError: AmazonAdError!) -> Void {
-        println("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription)")
+        print("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription)")
     }
     
     func adViewWillExpand(view: AmazonAdView!) -> Void {
-        println("Ad will expand")
+        print("Ad will expand")
     }
     
     func adViewDidCollapse(view: AmazonAdView!) -> Void {
-        println("Ad has collapsed")
+        print("Ad has collapsed")
     }
 
     
@@ -193,39 +193,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     
     
     
-    func getIFAddresses() -> [String] {
-        var addresses = [String]()
-        
-        // Get list of all interfaces on the local machine:
-        var ifaddr : UnsafeMutablePointer<ifaddrs> = nil
-        if getifaddrs(&ifaddr) == 0 {
-            
-            // For each interface ...
-            for (var ptr = ifaddr; ptr != nil; ptr = ptr.memory.ifa_next) {
-                let flags = Int32(ptr.memory.ifa_flags)
-                var addr = ptr.memory.ifa_addr.memory
-                
-                // Check for running IPv4, IPv6 interfaces. Skip the loopback interface.
-                if (flags & (IFF_UP|IFF_RUNNING|IFF_LOOPBACK)) == (IFF_UP|IFF_RUNNING) {
-                    if addr.sa_family == UInt8(AF_INET) || addr.sa_family == UInt8(AF_INET6) {
-                        
-                        // Convert interface address to a human readable string:
-                        var hostname = [CChar](count: Int(NI_MAXHOST), repeatedValue: 0)
-                        if (getnameinfo(&addr, socklen_t(addr.sa_len), &hostname, socklen_t(hostname.count),
-                            nil, socklen_t(0), NI_NUMERICHOST) == 0) {
-                                if let address = String.fromCString(hostname) {
-                                    addresses.append(address)
-                                }
-                        }
-                    }
-                }
-            }
-            freeifaddrs(ifaddr)
-        }
-        
-        return addresses
-    }
-    
+         
     
 }
 

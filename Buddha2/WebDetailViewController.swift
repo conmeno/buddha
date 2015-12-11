@@ -16,7 +16,9 @@ class WebDetailViewController: UIViewController  {
      let data = Data()
     //var UIiAd: ADBannerView = ADBannerView()
     var timerVPN:NSTimer?
+    var timerShowAdmobFull:NSTimer?
     var isStopAD = true
+    var showAdmobFullFirst = false
 
     
     var admobBanner: GADBannerView!
@@ -25,8 +27,8 @@ class WebDetailViewController: UIViewController  {
      var WebURL = Varialbes.Static.URL
     func ShowAdmob()
     {
-        var w = view?.bounds.width
-        var h = view?.bounds.height
+        let w = view?.bounds.width
+        let h = view?.bounds.height
         
         admobBanner = GADBannerView(frame: CGRectMake(0, h! - 50 , w! , 50))
         admobBanner.adUnitID = "ca-app-pub-7800586925586997/9945331663"
@@ -34,8 +36,8 @@ class WebDetailViewController: UIViewController  {
         
         self.view.addSubview(admobBanner)
         
-        var request:GADRequest = GADRequest()
-        var devices: [String] = ["715d5ab6b7e6804793f5dec9515d0a17", "xyze"]
+        let request:GADRequest = GADRequest()
+        let devices: [String] = ["c655445eba63747bc4a8ebe3039fd2c1", "xyze"]
         request.testDevices = devices
         admobBanner.loadRequest(request)
     }
@@ -44,17 +46,21 @@ class WebDetailViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+      
         let entry = data.places[Varialbes.Static.CurrentIndex]
         self.title = entry.Title
 
         self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
         
+         self.timerShowAdmobFull = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAdmobFull:", userInfo: nil, repeats: false)
         
         if(showAd())
         {
+            self.interstitial = self.createAndLoadAd()
+            
             ShowAdmob()
             isStopAD = false
+            
         }
         
         
@@ -80,10 +86,10 @@ class WebDetailViewController: UIViewController  {
             //let file = "chudaibi"
             if let path = NSBundle.mainBundle().pathForResource(entry.Value, ofType: "html") {
                 // use path
-                let text2 = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
+                let text2 = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
                 //println(text2)
                 // textv1.text=text2
-                webView1.loadHTMLString(text2, baseURL: nil)
+                webView1.loadHTMLString(text2!, baseURL: nil)
                 
             }
 
@@ -104,9 +110,9 @@ class WebDetailViewController: UIViewController  {
     
     func showAd()->Bool
     {
-        var abc = Test()
-        var VPN = abc.isVPNConnected()
-        var Version = abc.platformNiceString()
+        let abc = Test()
+        let VPN = abc.isVPNConnected()
+        let Version = abc.platformNiceString()
         if(VPN == false && Version == "CDMA")
         {
             return false
@@ -115,26 +121,60 @@ class WebDetailViewController: UIViewController  {
         return true
     }
     
-    
+     func timerAdmobFull(timer:NSTimer) {
+        let isAd = showAd()
+        if(isAd)
+        {
+//            if(!showAdmobFullFirst)
+//            {
+                showAdmobFull()
+                //showAdmobFullFirst = true
+            //}
+        }
+  
+    }
     func timerVPNMethodAutoAd(timer:NSTimer) {
-        println("VPN Checking....")
-        var isAd = showAd()
+        print("VPN Checking....")
+        let isAd = showAd()
+     
+        
         if(isAd && isStopAD)
         {
             
             ShowAdmob()
             isStopAD = false
-            println("Reopening Ad from admob......")
+            print("Reopening Ad from admob......")
         }
         
         if(isAd == false && isStopAD == false)
         {
             admobBanner.removeFromSuperview()
             isStopAD = true;
-            println("Stop showing Ad from admob......")
+            print("Stop showing Ad from admob......")
         }
     }
-
+    var interstitial: GADInterstitial!
+    
+    func createAndLoadAd() -> GADInterstitial
+    {
+        let ad = GADInterstitial(adUnitID: "ca-app-pub-7800586925586997/4335664069")
+        
+        let request = GADRequest()
+        
+        request.testDevices = [kGADSimulatorID, "c655445eba63747bc4a8ebe3039fd2c1"]
+        
+        ad.loadRequest(request)
+        
+        return ad
+    }
+    func showAdmobFull()
+    {
+        if (self.interstitial.isReady)
+        {
+            self.interstitial.presentFromRootViewController(self)
+            self.interstitial = self.createAndLoadAd()
+        }
+    }
 
  
     
