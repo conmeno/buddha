@@ -11,15 +11,17 @@ import UIKit
 import GoogleMobileAds
 
 
-class WebDetailViewController: UIViewController  {
+class WebDetailViewController: UIViewController,AmazonAdInterstitialDelegate {
     
      let data = Data()
     //var UIiAd: ADBannerView = ADBannerView()
     var timerVPN:NSTimer?
     var timerShowAdmobFull:NSTimer?
     var isStopAD = true
-    var showAdmobFullFirst = false
-
+  
+    var isShowFullAdmob = false
+    var isShowFllAmazon = false
+    var interstitialAmazon: AmazonAdInterstitial!
     
     var admobBanner: GADBannerView!
     @IBOutlet weak var webView1: UIWebView!
@@ -46,35 +48,41 @@ class WebDetailViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-      
+        
         let entry = data.places[Varialbes.Static.CurrentIndex]
         self.title = entry.Title
 
         self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
         
-         self.timerShowAdmobFull = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAdmobFull:", userInfo: nil, repeats: false)
+         self.timerShowAdmobFull = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAdmobFull:", userInfo: nil, repeats: true)
         
         if(showAd())
         {
-            self.interstitial = self.createAndLoadAd()
+            
             
             ShowAdmob()
             isStopAD = false
+            
+            if(entry.adType == 1)
+            {
+                self.interstitial = self.createAndLoadAd()
+                
+            }
+            else
+            {
+                isShowFllAmazon = true
+                isShowFullAdmob = true
+                interstitialAmazon = AmazonAdInterstitial()
+                
+                interstitialAmazon!.delegate = self
+                
+            }
             
         }
         
         
 //        
-//        if(entry.adType == 1)
-//        {
-//            ShowAdmob()
-//        
-//        }
-//        else
-//        {
-//            //admobBanner.removeFromSuperview()
-//            AP_SDK.showAdWithViewController(self, withPlacementId: 0, isTestMode: false)
-//        }
+       
         
 
         if(entry.Title == "")
@@ -98,9 +106,28 @@ class WebDetailViewController: UIViewController  {
             let requestURL = NSURL(string:entry.URL)
             let request = NSURLRequest(URL: requestURL!)
             webView1.loadRequest(request)
+           
         }
         
     }
+    
+    //amazon full
+    //amaazon
+    func LoadAmazon()
+    {
+        let options = AmazonAdOptions()
+        
+        options.isTestRequest = true
+        
+        interstitialAmazon.load(options)
+    }
+    
+    func showAmazonFull()
+    {
+        interstitialAmazon.presentFromViewController(self)
+        
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -125,12 +152,29 @@ class WebDetailViewController: UIViewController  {
         let isAd = showAd()
         if(isAd)
         {
-//            if(!showAdmobFullFirst)
-//            {
-                showAdmobFull()
-                //showAdmobFullFirst = true
-            //}
+            if(isShowFllAmazon)
+            {
+                showAmazonFull()
+                
+                
+            }
+           
+            if(!isShowFullAdmob)
+            {
+                
+                if(self.interstitial.isReady)
+                {
+                    showAdmobFull()
+                    isShowFullAdmob = true;
+                    timerShowAdmobFull?.invalidate()
+                }
+                
+                
+                
+                
+            }
         }
+        
   
     }
     func timerVPNMethodAutoAd(timer:NSTimer) {
@@ -175,6 +219,37 @@ class WebDetailViewController: UIViewController  {
             self.interstitial = self.createAndLoadAd()
         }
     }
+    
+    // Mark: - AmazonAdInterstitialDelegate
+    func interstitialDidLoad(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial loaded.", terminator: "")
+        //loadStatusLabel.text = "Interstitial loaded."
+    }
+    
+    func interstitialDidFailToLoad(interstitial: AmazonAdInterstitial!, withError: AmazonAdError!) {
+        Swift.print("Interstitial failed to load.", terminator: "")
+        //loadStatusLabel.text = "Interstitial failed to load."
+    }
+    
+    func interstitialWillPresent(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial will be presented.", terminator: "")
+    }
+    
+    func interstitialDidPresent(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial has been presented.", terminator: "")
+    }
+    
+    func interstitialWillDismiss(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial will be dismissed.", terminator: "")
+    }
+    
+    func interstitialDidDismiss(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial has been dismissed.", terminator: "");
+        //self.loadStatusLabel.text = "No interstitial loaded.";
+timerShowAdmobFull?.invalidate()
+        LoadAmazon()
+    }
+
 
  
     

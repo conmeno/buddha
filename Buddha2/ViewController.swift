@@ -19,6 +19,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
     var timerAd:NSTimer?
    // @IBOutlet weak var fbBanner: FBAdView!
     @IBOutlet var amazonAdView: AmazonAdView!
+    
     func showAmazon()
     {
         amazonAdView = AmazonAdView(adSize: AmazonAdSize_320x50)
