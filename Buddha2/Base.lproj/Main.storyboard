@@ -10,7 +10,7 @@
         <!--Life Of The Buddha-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LifeOfTheBuddha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Buddha_s_Life" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LifeBuddha.png" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-Xa-She">
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BuddhaLife2.png" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-Xa-She">
                                 <rect key="frame" x="0.0" y="50" width="600" height="550"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -230,7 +230,7 @@
         <!--Detail View Controller-->
         <scene sceneID="3Ny-9o-MhS">
             <objects>
-                <viewController storyboardIdentifier="myDetailView1" id="8XQ-mV-E8r" customClass="DetailViewController" customModule="LifeOfTheBuddha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myDetailView1" id="8XQ-mV-E8r" customClass="DetailViewController" customModule="The_Buddha_s_Life" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yd9-Ax-ful"/>
                         <viewControllerLayoutGuide type="bottom" id="6dB-rQ-bTC"/>
@@ -415,7 +415,7 @@
         <!--web title-->
         <scene sceneID="vgO-St-2vo">
             <objects>
-                <viewController storyboardIdentifier="webDetail" id="Mae-38-XSa" customClass="WebDetailViewController" customModule="LifeOfTheBuddha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webDetail" id="Mae-38-XSa" customClass="WebDetailViewController" customModule="The_Buddha_s_Life" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PFJ-cW-Ihn"/>
                         <viewControllerLayoutGuide type="bottom" id="qj4-K4-ouD"/>
@@ -515,7 +515,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LifeBuddha.png" width="1024" height="1024"/>
+        <image name="BuddhaLife2.png" width="1024" height="1024"/>
         <image name="icon3.png" width="150" height="150"/>
     </resources>
 </document>

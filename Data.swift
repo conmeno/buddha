@@ -63,6 +63,7 @@ self.adType = adType
 //    31. Sunita, the Scavenger
 //    32. The Buddha and the Sick Monk
     let places = [
+        Entry(ID: 1,NType: 1,adType: 2, Name: "Pictures Summary", Title:"Pictures Summary", Value: "33", Icon: "icon33.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "1. Queen Maha Maya's Dream", Title:"1. Queen Maha Maya's Dream", Value: "1", Icon: "icon17.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "2. The Birth of the Prince", Title:"2. The Birth of the Prince", Value: "2", Icon: "icon2.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "3. The Naming Ceremony", Title:"3. The Naming Ceremony", Value: "3", Icon: "icon3.png",URL: ""),
@@ -94,9 +95,9 @@ self.adType = adType
         Entry(ID: 1,NType: 1,adType: 1, Name: "29 . Angulimala, the Bandit", Title:"29 . Angulimala, the Bandit", Value: "29", Icon: "icon29.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "30. Wakkali and the Buddha", Title:"30. Wakkali and the Buddha", Value: "30", Icon: "icon30.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "31. Sunita, the Scavenger", Title:"31. Sunita, the Scavenger", Value: "31", Icon: "icon31.png",URL: ""),
-        Entry(ID: 1,NType: 1,adType: 1, Name: "32. The Buddha and the Sick Monk", Title:"32. The Buddha and the Sick Monk", Value: "32", Icon: "icon32.png",URL: ""),
+        Entry(ID: 1,NType: 1,adType: 1, Name: "32. The Buddha and the Sick Monk", Title:"32. The Buddha and the Sick Monk", Value: "32", Icon: "icon32.png",URL: "")
         
-        Entry(ID: 1,NType: 1,adType: 1, Name: "33. Pictures", Title:"33. Pictures", Value: "33", Icon: "icon33.png",URL: "")
+        
  
         
         

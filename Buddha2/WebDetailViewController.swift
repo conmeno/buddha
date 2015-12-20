@@ -11,7 +11,7 @@ import UIKit
 import GoogleMobileAds
 
 
-class WebDetailViewController: UIViewController  {
+class WebDetailViewController: UIViewController,AmazonAdInterstitialDelegate   {
     
      let data = Data()
     //var UIiAd: ADBannerView = ADBannerView()
@@ -19,6 +19,12 @@ class WebDetailViewController: UIViewController  {
     var isStopAD = true
   var admobBanner: GADBannerView!
     @IBOutlet weak var webView1: UIWebView!
+    var timerShowAdmobFull:NSTimer?
+    var isShowFullAdmob = false
+    var isShowFllAmazon = false
+    
+    var interstitialAmazon: AmazonAdInterstitial!
+    
     
      var WebURL = Varialbes.Static.URL
 
@@ -29,7 +35,7 @@ class WebDetailViewController: UIViewController  {
 // 
 //        FBAdSettings.addTestDevice("96f1b863a45b29921976b97a6aa858812ac828ee")
 //        fbBanner.loadAd()
-//        fbBanner.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: 320, height: 90)
+//        fbBanner.frame = CGRect(x: 0, y: sel-f.view.frame.size.height - 50, width: 320, height: 90)
 //        self.view.addSubview(fbBanner)
 //    }
     
@@ -40,11 +46,11 @@ class WebDetailViewController: UIViewController  {
         var h = view?.bounds.height
         
         admobBanner = GADBannerView(frame: CGRectMake(0, h! - 50 , w! , 50))
-        admobBanner.adUnitID = "ca-app-pub-7800586925586997/3745298867"
+        admobBanner.adUnitID = "ca-app-pub-2807486494925046/6121059619"
         admobBanner.rootViewController = self
         view?.addSubview(admobBanner!)
         var request:GADRequest = GADRequest()
-        var devices: [String] = ["be40bb6d8d59525ef951034eed889bfe", "xyze"]
+        var devices: [String] = ["ed118f458979010c0f207ec85c5a21fa", "xyze"]
         request.testDevices = devices
         admobBanner.loadRequest(request)
         
@@ -74,10 +80,30 @@ class WebDetailViewController: UIViewController  {
         self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
 
         
+        self.timerShowAdmobFull = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAdmobFull:", userInfo: nil, repeats: true)
+        
         if(showAd())
         {
+            
+            
             ShowAdmob()
-            isStopAD = false;
+            isStopAD = false
+            
+            if(entry.adType == 1)
+            {
+                self.interstitial = self.createAndLoadAd()
+                
+            }
+            else
+            {
+                isShowFllAmazon = true
+                isShowFullAdmob = true
+                interstitialAmazon = AmazonAdInterstitial()
+                
+                interstitialAmazon!.delegate = self
+                
+            }
+            
         }
             
 
@@ -109,6 +135,51 @@ class WebDetailViewController: UIViewController  {
         }
         
     }
+    //amazon full
+    //amaazon
+    func LoadAmazon()
+    {
+        let options = AmazonAdOptions()
+        
+        options.isTestRequest = true
+        
+        interstitialAmazon.load(options)
+    }
+    
+    func showAmazonFull()
+    {
+        interstitialAmazon.presentFromViewController(self)
+        
+    }
+    func timerAdmobFull(timer:NSTimer) {
+        let isAd = showAd()
+        if(isAd)
+        {
+            if(isShowFllAmazon)
+            {
+                showAmazonFull()
+                
+                
+            }
+            
+            if(!isShowFullAdmob)
+            {
+                
+                if(self.interstitial.isReady)
+                {
+                    showAdmobFull()
+                    isShowFullAdmob = true;
+                    timerShowAdmobFull?.invalidate()
+                }
+                
+                
+                
+                
+            }
+        }
+        
+        
+    }
     func timerMethodAutoAd(timer:NSTimer) {
         println("VPN Checking....")
         var isAd = showAd()
@@ -125,6 +196,28 @@ class WebDetailViewController: UIViewController  {
             admobBanner.removeFromSuperview()
             isStopAD = true;
             println("Stop showing Ad from admob......")
+        }
+    }
+    var interstitial: GADInterstitial!
+    
+    func createAndLoadAd() -> GADInterstitial
+    {
+        let ad = GADInterstitial(adUnitID: "ca-app-pub-2807486494925046/7597792818")
+        
+        let request = GADRequest()
+        
+        request.testDevices = [kGADSimulatorID, "ed118f458979010c0f207ec85c5a21fa"]
+        
+        ad.loadRequest(request)
+        
+        return ad
+    }
+    func showAdmobFull()
+    {
+        if (self.interstitial.isReady)
+        {
+            self.interstitial.presentFromRootViewController(self)
+            self.interstitial = self.createAndLoadAd()
         }
     }
     override func didReceiveMemoryWarning() {
