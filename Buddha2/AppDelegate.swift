@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         
         //AP_SDK.setupForAppPortalIdentifier("285645")
-        AmazonAdRegistration.sharedRegistration().setAppKey("6d4713e1570d45ac94693be2916fbfbb")
+        AmazonAdRegistration.sharedRegistration().setAppKey("7f8afada61384f268d9e006f18f495d8")
         AmazonAdRegistration.sharedRegistration().setLogging(true)
 
         return true

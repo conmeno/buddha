@@ -11,7 +11,6 @@
 
 
 #import <UIKit/UIKit.h>
-#import <AmazonAd/AmazonAdInterstitial.h>
 #import <AmazonAd/AmazonAdRegistration.h>
 #import <AmazonAd/AmazonAdView.h>
 #import <AmazonAd/AmazonAdError.h>
