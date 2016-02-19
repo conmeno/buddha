@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Data {
+class Data1 {
     class Entry {
         let ID: Int
         let NType: Int// type=1 => web file , type =2 web link

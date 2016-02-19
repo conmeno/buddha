@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,88 +15,69 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "965895991B21971A00D854FF"
-               BuildableName = "hocphat.app"
-               BlueprintName = "hocphat"
-               ReferencedContainer = "container:hocphat.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "965895AE1B21971B00D854FF"
-               BuildableName = "hocphatTests.xctest"
-               BlueprintName = "hocphatTests"
-               ReferencedContainer = "container:hocphat.xcodeproj">
+               BuildableName = "LifeOfTheBuddha.app"
+               BlueprintName = "LifeOfTheBuddha"
+               ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "965895AE1B21971B00D854FF"
-               BuildableName = "hocphatTests.xctest"
-               BlueprintName = "hocphatTests"
-               ReferencedContainer = "container:hocphat.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "965895991B21971A00D854FF"
-            BuildableName = "hocphat.app"
-            BlueprintName = "hocphat"
-            ReferencedContainer = "container:hocphat.xcodeproj">
+            BuildableName = "LifeOfTheBuddha.app"
+            BlueprintName = "LifeOfTheBuddha"
+            ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "965895991B21971A00D854FF"
-            BuildableName = "hocphat.app"
-            BlueprintName = "hocphat"
-            ReferencedContainer = "container:hocphat.xcodeproj">
+            BuildableName = "LifeOfTheBuddha.app"
+            BlueprintName = "LifeOfTheBuddha"
+            ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "965895991B21971A00D854FF"
-            BuildableName = "hocphat.app"
-            BlueprintName = "hocphat"
-            ReferencedContainer = "container:hocphat.xcodeproj">
+            BuildableName = "LifeOfTheBuddha.app"
+            BlueprintName = "LifeOfTheBuddha"
+            ReferencedContainer = "container:LifeOfTheBuddha.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -105,7 +86,6 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "phathoc"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

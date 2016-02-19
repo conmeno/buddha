@@ -118,12 +118,10 @@
 		84A6B3DF1B8D793F00426D60 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DE1B8D793F00426D60 /* AdSupport.framework */; };
 		84A6B3E11B8D794900426D60 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E01B8D794900426D60 /* CoreMotion.framework */; };
 		84A6B3E31B8D794F00426D60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E21B8D794F00426D60 /* StoreKit.framework */; };
-		84A6B3E51B8D795700426D60 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E41B8D795700426D60 /* libz.dylib */; };
 		84A6B3E71B8D795B00426D60 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E61B8D795B00426D60 /* AVFoundation.framework */; };
 		84A6B3E91B8D796100426D60 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E81B8D796100426D60 /* CoreTelephony.framework */; };
 		84A6B3EB1B8D796900426D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */; };
 		84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EC1B8D797300426D60 /* CoreMedia.framework */; };
-		84A6B3EF1B8D797D00426D60 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EE1B8D797D00426D60 /* libc++.dylib */; };
 		84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3F01B8D798300426D60 /* MediaPlayer.framework */; };
 		84A880EB1B9988C800354A36 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880EA1B9988C800354A36 /* WebKit.framework */; };
 		84A880ED1B9988D700354A36 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A880EC1B9988D700354A36 /* MessageUI.framework */; };
@@ -137,7 +135,11 @@
 		84AC08811BE0A65D00A850A5 /* icon32.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC087C1BE0A65D00A850A5 /* icon32.png */; };
 		84AC08821BE0A65D00A850A5 /* icon33.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC087D1BE0A65D00A850A5 /* icon33.png */; };
 		84AC08831BE0A65D00A850A5 /* icon34.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC087E1BE0A65D00A850A5 /* icon34.png */; };
-		84AC08851BE0C6A100A850A5 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AC08841BE0C6A100A850A5 /* Test.m */; };
+		9651C2D41C76FEDB00DD9BFC /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651C2CD1C76FEDB00DD9BFC /* AdManagerView.swift */; };
+		9651C2D51C76FEDB00DD9BFC /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9651C2D01C76FEDB00DD9BFC /* cclass.m */; };
+		9651C2D61C76FEDB00DD9BFC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651C2D11C76FEDB00DD9BFC /* Data.swift */; };
+		9651C2D71C76FEDB00DD9BFC /* MyAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651C2D21C76FEDB00DD9BFC /* MyAd.swift */; };
+		9651C2D81C76FEDB00DD9BFC /* StoryboardAD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9651C2D31C76FEDB00DD9BFC /* StoryboardAD.storyboard */; };
 		965895A01B21971A00D854FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658959F1B21971A00D854FF /* AppDelegate.swift */; };
 		965895A21B21971A00D854FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895A11B21971A00D854FF /* ViewController.swift */; };
 		965895A51B21971A00D854FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965895A31B21971A00D854FF /* Main.storyboard */; };
@@ -147,7 +149,7 @@
 		965895C51B21AA5400D854FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895C41B21AA5400D854FF /* DetailViewController.swift */; };
 		965895C71B26BD1E00D854FF /* WebDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895C61B26BD1E00D854FF /* WebDetailViewController.swift */; };
 		965895C91B26BE4600D854FF /* Varialbes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895C81B26BE4600D854FF /* Varialbes.swift */; };
-		965895CB1B26D3D200D854FF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895CA1B26D3D200D854FF /* Data.swift */; };
+		965895CB1B26D3D200D854FF /* Data1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895CA1B26D3D200D854FF /* Data1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,19 +268,16 @@
 		84A500911BA26A100092D279 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		84A500921BA26A100092D279 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vuonhoa-Bridging-header.h"; sourceTree = "<group>"; };
 		84A6B3D81B8D792D00426D60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		84A6B3DC1B8D793A00426D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A6B3DE1B8D793F00426D60 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		84A6B3E01B8D794900426D60 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		84A6B3E21B8D794F00426D60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		84A6B3E41B8D795700426D60 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84A6B3E61B8D795B00426D60 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84A6B3E81B8D796100426D60 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		84A6B3EC1B8D797300426D60 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		84A6B3EE1B8D797D00426D60 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		84A6B3F01B8D798300426D60 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		84A880EA1B9988C800354A36 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		84A880EC1B9988D700354A36 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -292,8 +291,13 @@
 		84AC087C1BE0A65D00A850A5 /* icon32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon32.png; path = icons/icon32.png; sourceTree = "<group>"; };
 		84AC087D1BE0A65D00A850A5 /* icon33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon33.png; path = icons/icon33.png; sourceTree = "<group>"; };
 		84AC087E1BE0A65D00A850A5 /* icon34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon34.png; path = icons/icon34.png; sourceTree = "<group>"; };
-		84AC08841BE0C6A100A850A5 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
-		84AC08861BE0C84700A850A5 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		9651C2CD1C76FEDB00DD9BFC /* AdManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdManagerView.swift; path = AdManager/AdManagerView.swift; sourceTree = "<group>"; };
+		9651C2CE1C76FEDB00DD9BFC /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-header.h"; path = "AdManager/Bridging-header.h"; sourceTree = "<group>"; };
+		9651C2CF1C76FEDB00DD9BFC /* cclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cclass.h; path = AdManager/cclass.h; sourceTree = "<group>"; };
+		9651C2D01C76FEDB00DD9BFC /* cclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cclass.m; path = AdManager/cclass.m; sourceTree = "<group>"; };
+		9651C2D11C76FEDB00DD9BFC /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = AdManager/Data.swift; sourceTree = "<group>"; };
+		9651C2D21C76FEDB00DD9BFC /* MyAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyAd.swift; path = AdManager/MyAd.swift; sourceTree = "<group>"; };
+		9651C2D31C76FEDB00DD9BFC /* StoryboardAD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardAD.storyboard; path = AdManager/StoryboardAD.storyboard; sourceTree = "<group>"; };
 		9658959A1B21971A00D854FF /* LifeOfTheBuddha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeOfTheBuddha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658959E1B21971A00D854FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9658959F1B21971A00D854FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -307,7 +311,7 @@
 		965895C41B21AA5400D854FF /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		965895C61B26BD1E00D854FF /* WebDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebDetailViewController.swift; sourceTree = "<group>"; };
 		965895C81B26BE4600D854FF /* Varialbes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Varialbes.swift; sourceTree = "<group>"; };
-		965895CA1B26D3D200D854FF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		965895CA1B26D3D200D854FF /* Data1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,10 +332,8 @@
 				84A880EF1B9988E300354A36 /* ImageIO.framework in Frameworks */,
 				84A880ED1B9988D700354A36 /* MessageUI.framework in Frameworks */,
 				84A880EB1B9988C800354A36 /* WebKit.framework in Frameworks */,
-				84A6B3EF1B8D797D00426D60 /* libc++.dylib in Frameworks */,
 				84A6B3EB1B8D796900426D60 /* SystemConfiguration.framework in Frameworks */,
 				84A6B3E71B8D795B00426D60 /* AVFoundation.framework in Frameworks */,
-				84A6B3E51B8D795700426D60 /* libz.dylib in Frameworks */,
 				84A5008E1BA269350092D279 /* AmazonAd.framework in Frameworks */,
 				84A6B3E11B8D794900426D60 /* CoreMotion.framework in Frameworks */,
 				84A6B3DF1B8D793F00426D60 /* AdSupport.framework in Frameworks */,
@@ -479,11 +481,23 @@
 			name = BuddhaLife;
 			sourceTree = "<group>";
 		};
+		9651C2CC1C76FEC000DD9BFC /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				9651C2CD1C76FEDB00DD9BFC /* AdManagerView.swift */,
+				9651C2CE1C76FEDB00DD9BFC /* Bridging-header.h */,
+				9651C2CF1C76FEDB00DD9BFC /* cclass.h */,
+				9651C2D01C76FEDB00DD9BFC /* cclass.m */,
+				9651C2D11C76FEDB00DD9BFC /* Data.swift */,
+				9651C2D21C76FEDB00DD9BFC /* MyAd.swift */,
+				9651C2D31C76FEDB00DD9BFC /* StoryboardAD.storyboard */,
+			);
+			name = Ad;
+			sourceTree = "<group>";
+		};
 		965895911B21971A00D854FF = {
 			isa = PBXGroup;
 			children = (
-				84AC08861BE0C84700A850A5 /* Test.h */,
-				84AC08841BE0C6A100A850A5 /* Test.m */,
 				84A500911BA26A100092D279 /* EventKit.framework */,
 				84A500921BA26A100092D279 /* EventKitUI.framework */,
 				84A5008F1BA269E30092D279 /* CoreLocation.framework */,
@@ -495,21 +509,18 @@
 				84A880EC1B9988D700354A36 /* MessageUI.framework */,
 				84A880EA1B9988C800354A36 /* WebKit.framework */,
 				84A6B3F01B8D798300426D60 /* MediaPlayer.framework */,
-				84A6B3EE1B8D797D00426D60 /* libc++.dylib */,
 				84A6B3EC1B8D797300426D60 /* CoreMedia.framework */,
 				84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */,
 				84A6B3E81B8D796100426D60 /* CoreTelephony.framework */,
 				84A6B3E61B8D795B00426D60 /* AVFoundation.framework */,
-				84A6B3E41B8D795700426D60 /* libz.dylib */,
 				84A6B3E21B8D794F00426D60 /* StoreKit.framework */,
 				84A6B3E01B8D794900426D60 /* CoreMotion.framework */,
 				84A6B3DE1B8D793F00426D60 /* AdSupport.framework */,
 				84A6B3DC1B8D793A00426D60 /* Foundation.framework */,
 				84A6B3DA1B8D793400426D60 /* CoreGraphics.framework */,
 				84A6B3D81B8D792D00426D60 /* UIKit.framework */,
-				84A6B3D31B8ABF2A00426D60 /* vuonhoa-Bridging-header.h */,
 				84A5991F1B5CCEFB00123092 /* GoogleMobileAds.framework */,
-				965895CA1B26D3D200D854FF /* Data.swift */,
+				965895CA1B26D3D200D854FF /* Data1.swift */,
 				965895C81B26BE4600D854FF /* Varialbes.swift */,
 				9658959C1B21971A00D854FF /* Buddha2 */,
 				965895B21B21971B00D854FF /* Buddha2Tests */,
@@ -529,6 +540,7 @@
 		9658959C1B21971A00D854FF /* Buddha2 */ = {
 			isa = PBXGroup;
 			children = (
+				9651C2CC1C76FEC000DD9BFC /* Ad */,
 				84A3F7001BDF65370062C2AB /* icons */,
 				84A38E1F1BDE140500795F54 /* images */,
 				84A4E3011BD9EDE40036EAA3 /* BuddhaLife */,
@@ -613,7 +625,8 @@
 		965895921B21971A00D854FF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Phuong Nguyen";
 				TargetAttributes = {
 					965895991B21971A00D854FF = {
@@ -692,6 +705,7 @@
 				84A3F7241BE07A3C0062C2AB /* icon7.png in Resources */,
 				965895AA1B21971A00D854FF /* LaunchScreen.xib in Resources */,
 				84A3F7371BE07A3C0062C2AB /* icon27.png in Resources */,
+				9651C2D81C76FEDB00DD9BFC /* StoryboardAD.storyboard in Resources */,
 				84A4E3241BD9EDF80036EAA3 /* 2.html in Resources */,
 				84A38E481BDE141A00795F54 /* p6.jpg in Resources */,
 				84A38E5F1BDE141A00795F54 /* p29.jpg in Resources */,
@@ -777,12 +791,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				965895C91B26BE4600D854FF /* Varialbes.swift in Sources */,
-				965895CB1B26D3D200D854FF /* Data.swift in Sources */,
+				9651C2D61C76FEDB00DD9BFC /* Data.swift in Sources */,
+				9651C2D51C76FEDB00DD9BFC /* cclass.m in Sources */,
+				9651C2D41C76FEDB00DD9BFC /* AdManagerView.swift in Sources */,
+				965895CB1B26D3D200D854FF /* Data1.swift in Sources */,
 				965895A21B21971A00D854FF /* ViewController.swift in Sources */,
 				965895C71B26BD1E00D854FF /* WebDetailViewController.swift in Sources */,
-				84AC08851BE0C6A100A850A5 /* Test.m in Sources */,
 				965895C51B21AA5400D854FF /* DetailViewController.swift in Sources */,
 				965895A01B21971A00D854FF /* AppDelegate.swift in Sources */,
+				9651C2D71C76FEDB00DD9BFC /* MyAd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,6 +861,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -862,6 +880,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Buddha2/AdManager/Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -898,6 +917,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Buddha2/AdManager/Bridging-header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -910,6 +930,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -919,9 +940,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "phuongnt2018.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LifeOfTheBuddha;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "vuonhoa-Bridging-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Buddha2/AdManager/Bridging-header.h";
 			};
 			name = Debug;
 		};
@@ -932,6 +954,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -941,9 +964,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "phuongnt2018.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LifeOfTheBuddha;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "vuonhoa-Bridging-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Buddha2/AdManager/Bridging-header.h";
 			};
 			name = Release;
 		};
@@ -961,6 +985,7 @@
 				);
 				INFOPLIST_FILE = Buddha2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "phuongnt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LifeOfTheBuddhaTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeOfTheBuddha.app/LifeOfTheBuddha";
 			};
@@ -976,6 +1001,7 @@
 				);
 				INFOPLIST_FILE = Buddha2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "phuongnt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LifeOfTheBuddhaTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeOfTheBuddha.app/LifeOfTheBuddha";
 			};

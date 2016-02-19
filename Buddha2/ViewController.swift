@@ -10,61 +10,18 @@ import UIKit
 import Foundation
  
  
-class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSource, UITableViewDelegate   {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate   {
 
     
     @IBOutlet weak var tableView: UITableView!
-    let data = Data()
+    let data = Data1()
     let textCellIdentifier = "TextCell"
     var timerAd:NSTimer?
    // @IBOutlet weak var fbBanner: FBAdView!
-    @IBOutlet var amazonAdView: AmazonAdView!
-    func showAmazon()
-    {
-        amazonAdView = AmazonAdView(adSize: AmazonAdSize_320x50)
-        loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
-        amazonAdView.delegate = self
-        self.view.addSubview(amazonAdView)
-        amazonAdView.alpha = 0.0
-    }
-    func loadAmazon()
-    {
     
-    }
-    func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
-        amazonAdView.hidden = true
-
-        var options = AmazonAdOptions()
-        options.isTestRequest = false
-        var x = (self.view.bounds.width - 320)/2
-        
-        if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
-            amazonAdView.frame = CGRectMake(x, self.view.bounds.height - 50, 320, 50)
-        } else {
-            amazonAdView.removeFromSuperview()
-          
-            if (interfaceOrientation == UIInterfaceOrientation.Portrait) {
-                amazonAdView = AmazonAdView(adSize: AmazonAdSize_728x90)
-                amazonAdView.frame = CGRectMake((self.view.bounds.width-728.0)/2.0, self.view.bounds.height - 50, 728.0, 90.0)
-            } else {
-                amazonAdView = AmazonAdView(adSize: AmazonAdSize_1024x50)
-                amazonAdView.frame = CGRectMake((self.view.bounds.width-1024.0)/2.0, self.view.bounds.height - 50, 1024.0, 50.0)
-            }
-            self.view.addSubview(amazonAdView)
-            amazonAdView.delegate = self
-        }
-        
-        amazonAdView.loadAd(options)
-           }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       amazonAdView.alpha = 0.0
-
-        showAmazon()
-        
-        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -72,31 +29,11 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         
         
         
-   self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
+   //self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
         
     }
     
-    func showAd()->Bool
-    {
-        var abc = Test()
-        var VPN = abc.isVPNConnected()
-        var Version = abc.platformNiceString()
-        if(VPN == false && Version == "CDMA")
-        {
-            return false
-        }
-
-        return true
-    }
-    
-    func timerMethodAutoAd(timer:NSTimer) {
-        println("auto load amazon")
-      loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
-        
-    }
-
-    
-    
+       
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -145,9 +82,9 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         //
         //performSegueWithIdentifier("myDetailView1", sender: nil)
         
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("myDetailView1") as UIViewController
+        let initialViewController = storyboard.instantiateViewControllerWithIdentifier("myDetailView1") as UIViewController
                  //presentViewController(initialViewController, animated: true, completion: nil)
         
         //self.window?.rootViewController = initialViewController
@@ -160,7 +97,7 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
         {
             Varialbes.Static.CurrentIndex = row
             
-            var WebDetailView = storyboard.instantiateViewControllerWithIdentifier("webDetail") as UIViewController
+            let WebDetailView = storyboard.instantiateViewControllerWithIdentifier("webDetail") as UIViewController
             
             
             self.navigationController?.pushViewController(WebDetailView, animated: true)
@@ -174,69 +111,9 @@ class ViewController: UIViewController, AmazonAdViewDelegate, UITableViewDataSou
 
     }
     //end table view
-    // Mark: - AmazonAdViewDelegate
-    func viewControllerForPresentingModalView() -> UIViewController {
-        return self
-    }
-    
-    func adViewDidLoad(view: AmazonAdView!) -> Void {
-        self.view.addSubview(amazonAdView)
-        amazonAdView.hidden = false
-        amazonAdView.alpha  = 1.0
-        //amazonAdView.hidden = false
-    }
-    
-    func adViewDidFailToLoad(view: AmazonAdView!, withError: AmazonAdError!) -> Void {
-        println("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription)")
-        amazonAdView.hidden = true
-        amazonAdView.removeFromSuperview()
-
-    }
-    
-    func adViewWillExpand(view: AmazonAdView!) -> Void {
-        println("Ad will expand")
-    }
-    
-    func adViewDidCollapse(view: AmazonAdView!) -> Void {
-        println("Ad has collapsed")
-    }
-
     
  
     
-    
-    func getIFAddresses() -> [String] {
-        var addresses = [String]()
-     
-        // Get list of all interfaces on the local machine:
-        var ifaddr : UnsafeMutablePointer<ifaddrs> = nil
-        if getifaddrs(&ifaddr) == 0 {
-            
-            // For each interface ...
-            for (var ptr = ifaddr; ptr != nil; ptr = ptr.memory.ifa_next) {
-                let flags = Int32(ptr.memory.ifa_flags)
-                var addr = ptr.memory.ifa_addr.memory
-                
-                // Check for running IPv4, IPv6 interfaces. Skip the loopback interface.
-                if (flags & (IFF_UP|IFF_RUNNING|IFF_LOOPBACK)) == (IFF_UP|IFF_RUNNING) {
-                    if addr.sa_family == UInt8(AF_INET) || addr.sa_family == UInt8(AF_INET6) {
-                        
-                        // Convert interface address to a human readable string:
-                        var hostname = [CChar](count: Int(NI_MAXHOST), repeatedValue: 0)
-                        if (getnameinfo(&addr, socklen_t(addr.sa_len), &hostname, socklen_t(hostname.count),
-                            nil, socklen_t(0), NI_NUMERICHOST) == 0) {
-                                if let address = String.fromCString(hostname) {
-                                    addresses.append(address)
-                                }
-                        }
-                    }
-                }
-            }
-            freeifaddrs(ifaddr)
-        }
-        
-        return addresses
-    }
     
     
 }
