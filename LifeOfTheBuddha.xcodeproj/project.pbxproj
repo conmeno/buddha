@@ -117,7 +117,6 @@
 		84A6B3DD1B8D793A00426D60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DC1B8D793A00426D60 /* Foundation.framework */; };
 		84A6B3DF1B8D793F00426D60 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3DE1B8D793F00426D60 /* AdSupport.framework */; };
 		84A6B3E11B8D794900426D60 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E01B8D794900426D60 /* CoreMotion.framework */; };
-		84A6B3E31B8D794F00426D60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E21B8D794F00426D60 /* StoreKit.framework */; };
 		84A6B3E71B8D795B00426D60 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E61B8D795B00426D60 /* AVFoundation.framework */; };
 		84A6B3E91B8D796100426D60 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3E81B8D796100426D60 /* CoreTelephony.framework */; };
 		84A6B3EB1B8D796900426D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */; };
@@ -273,7 +272,6 @@
 		84A6B3DC1B8D793A00426D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A6B3DE1B8D793F00426D60 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		84A6B3E01B8D794900426D60 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		84A6B3E21B8D794F00426D60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		84A6B3E61B8D795B00426D60 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84A6B3E81B8D796100426D60 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -323,7 +321,6 @@
 				84A500941BA26A100092D279 /* EventKitUI.framework in Frameworks */,
 				84A6B3F11B8D798300426D60 /* MediaPlayer.framework in Frameworks */,
 				84A500901BA269E30092D279 /* CoreLocation.framework in Frameworks */,
-				84A6B3E31B8D794F00426D60 /* StoreKit.framework in Frameworks */,
 				84A6B3ED1B8D797300426D60 /* CoreMedia.framework in Frameworks */,
 				84A880F51B99890800354A36 /* AudioToolbox.framework in Frameworks */,
 				84A880F31B9988FD00354A36 /* CFNetwork.framework in Frameworks */,
@@ -513,7 +510,6 @@
 				84A6B3EA1B8D796900426D60 /* SystemConfiguration.framework */,
 				84A6B3E81B8D796100426D60 /* CoreTelephony.framework */,
 				84A6B3E61B8D795B00426D60 /* AVFoundation.framework */,
-				84A6B3E21B8D794F00426D60 /* StoreKit.framework */,
 				84A6B3E01B8D794900426D60 /* CoreMotion.framework */,
 				84A6B3DE1B8D793F00426D60 /* AdSupport.framework */,
 				84A6B3DC1B8D793A00426D60 /* Foundation.framework */,
@@ -632,6 +628,11 @@
 					965895991B21971A00D854FF = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 597LVZ4LQD;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					965895AE1B21971B00D854FF = {
 						CreatedOnToolsVersion = 6.1.1;
