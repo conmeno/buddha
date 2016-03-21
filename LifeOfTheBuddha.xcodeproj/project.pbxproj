@@ -134,11 +134,13 @@
 		84AC08811BE0A65D00A850A5 /* icon32.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC087C1BE0A65D00A850A5 /* icon32.png */; };
 		84AC08821BE0A65D00A850A5 /* icon33.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC087D1BE0A65D00A850A5 /* icon33.png */; };
 		84AC08831BE0A65D00A850A5 /* icon34.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC087E1BE0A65D00A850A5 /* icon34.png */; };
-		9651C2D41C76FEDB00DD9BFC /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651C2CD1C76FEDB00DD9BFC /* AdManagerView.swift */; };
-		9651C2D51C76FEDB00DD9BFC /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9651C2D01C76FEDB00DD9BFC /* cclass.m */; };
-		9651C2D61C76FEDB00DD9BFC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651C2D11C76FEDB00DD9BFC /* Data.swift */; };
-		9651C2D71C76FEDB00DD9BFC /* MyAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651C2D21C76FEDB00DD9BFC /* MyAd.swift */; };
-		9651C2D81C76FEDB00DD9BFC /* StoryboardAD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9651C2D31C76FEDB00DD9BFC /* StoryboardAD.storyboard */; };
+		965249351C9FFBF00014D59F /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652492C1C9FFBF00014D59F /* AdManagerView.swift */; };
+		965249361C9FFBF00014D59F /* ADXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652492D1C9FFBF00014D59F /* ADXML.swift */; };
+		965249371C9FFBF00014D59F /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 965249301C9FFBF00014D59F /* cclass.m */; };
+		965249381C9FFBF00014D59F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965249311C9FFBF00014D59F /* Data.swift */; };
+		965249391C9FFBF00014D59F /* MyAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965249321C9FFBF00014D59F /* MyAd.swift */; };
+		9652493A1C9FFBF00014D59F /* StoryboardAD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965249331C9FFBF00014D59F /* StoryboardAD.storyboard */; };
+		9652493B1C9FFBF00014D59F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965249341C9FFBF00014D59F /* Utility.swift */; };
 		965895A01B21971A00D854FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658959F1B21971A00D854FF /* AppDelegate.swift */; };
 		965895A21B21971A00D854FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965895A11B21971A00D854FF /* ViewController.swift */; };
 		965895A51B21971A00D854FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965895A31B21971A00D854FF /* Main.storyboard */; };
@@ -289,13 +291,15 @@
 		84AC087C1BE0A65D00A850A5 /* icon32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon32.png; path = icons/icon32.png; sourceTree = "<group>"; };
 		84AC087D1BE0A65D00A850A5 /* icon33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon33.png; path = icons/icon33.png; sourceTree = "<group>"; };
 		84AC087E1BE0A65D00A850A5 /* icon34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon34.png; path = icons/icon34.png; sourceTree = "<group>"; };
-		9651C2CD1C76FEDB00DD9BFC /* AdManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdManagerView.swift; path = AdManager/AdManagerView.swift; sourceTree = "<group>"; };
-		9651C2CE1C76FEDB00DD9BFC /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-header.h"; path = "AdManager/Bridging-header.h"; sourceTree = "<group>"; };
-		9651C2CF1C76FEDB00DD9BFC /* cclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cclass.h; path = AdManager/cclass.h; sourceTree = "<group>"; };
-		9651C2D01C76FEDB00DD9BFC /* cclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cclass.m; path = AdManager/cclass.m; sourceTree = "<group>"; };
-		9651C2D11C76FEDB00DD9BFC /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = AdManager/Data.swift; sourceTree = "<group>"; };
-		9651C2D21C76FEDB00DD9BFC /* MyAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyAd.swift; path = AdManager/MyAd.swift; sourceTree = "<group>"; };
-		9651C2D31C76FEDB00DD9BFC /* StoryboardAD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardAD.storyboard; path = AdManager/StoryboardAD.storyboard; sourceTree = "<group>"; };
+		9652492C1C9FFBF00014D59F /* AdManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdManagerView.swift; path = AdManager/AdManagerView.swift; sourceTree = "<group>"; };
+		9652492D1C9FFBF00014D59F /* ADXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADXML.swift; path = AdManager/ADXML.swift; sourceTree = "<group>"; };
+		9652492E1C9FFBF00014D59F /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-header.h"; path = "AdManager/Bridging-header.h"; sourceTree = "<group>"; };
+		9652492F1C9FFBF00014D59F /* cclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cclass.h; path = AdManager/cclass.h; sourceTree = "<group>"; };
+		965249301C9FFBF00014D59F /* cclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cclass.m; path = AdManager/cclass.m; sourceTree = "<group>"; };
+		965249311C9FFBF00014D59F /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = AdManager/Data.swift; sourceTree = "<group>"; };
+		965249321C9FFBF00014D59F /* MyAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyAd.swift; path = AdManager/MyAd.swift; sourceTree = "<group>"; };
+		965249331C9FFBF00014D59F /* StoryboardAD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardAD.storyboard; path = AdManager/StoryboardAD.storyboard; sourceTree = "<group>"; };
+		965249341C9FFBF00014D59F /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = AdManager/Utility.swift; sourceTree = "<group>"; };
 		9658959A1B21971A00D854FF /* LifeOfTheBuddha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeOfTheBuddha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9658959E1B21971A00D854FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9658959F1B21971A00D854FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -481,13 +485,15 @@
 		9651C2CC1C76FEC000DD9BFC /* Ad */ = {
 			isa = PBXGroup;
 			children = (
-				9651C2CD1C76FEDB00DD9BFC /* AdManagerView.swift */,
-				9651C2CE1C76FEDB00DD9BFC /* Bridging-header.h */,
-				9651C2CF1C76FEDB00DD9BFC /* cclass.h */,
-				9651C2D01C76FEDB00DD9BFC /* cclass.m */,
-				9651C2D11C76FEDB00DD9BFC /* Data.swift */,
-				9651C2D21C76FEDB00DD9BFC /* MyAd.swift */,
-				9651C2D31C76FEDB00DD9BFC /* StoryboardAD.storyboard */,
+				9652492C1C9FFBF00014D59F /* AdManagerView.swift */,
+				9652492D1C9FFBF00014D59F /* ADXML.swift */,
+				9652492E1C9FFBF00014D59F /* Bridging-header.h */,
+				9652492F1C9FFBF00014D59F /* cclass.h */,
+				965249301C9FFBF00014D59F /* cclass.m */,
+				965249311C9FFBF00014D59F /* Data.swift */,
+				965249321C9FFBF00014D59F /* MyAd.swift */,
+				965249331C9FFBF00014D59F /* StoryboardAD.storyboard */,
+				965249341C9FFBF00014D59F /* Utility.swift */,
 			);
 			name = Ad;
 			sourceTree = "<group>";
@@ -706,7 +712,7 @@
 				84A3F7241BE07A3C0062C2AB /* icon7.png in Resources */,
 				965895AA1B21971A00D854FF /* LaunchScreen.xib in Resources */,
 				84A3F7371BE07A3C0062C2AB /* icon27.png in Resources */,
-				9651C2D81C76FEDB00DD9BFC /* StoryboardAD.storyboard in Resources */,
+				9652493A1C9FFBF00014D59F /* StoryboardAD.storyboard in Resources */,
 				84A4E3241BD9EDF80036EAA3 /* 2.html in Resources */,
 				84A38E481BDE141A00795F54 /* p6.jpg in Resources */,
 				84A38E5F1BDE141A00795F54 /* p29.jpg in Resources */,
@@ -792,15 +798,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				965895C91B26BE4600D854FF /* Varialbes.swift in Sources */,
-				9651C2D61C76FEDB00DD9BFC /* Data.swift in Sources */,
-				9651C2D51C76FEDB00DD9BFC /* cclass.m in Sources */,
-				9651C2D41C76FEDB00DD9BFC /* AdManagerView.swift in Sources */,
+				965249381C9FFBF00014D59F /* Data.swift in Sources */,
+				965249371C9FFBF00014D59F /* cclass.m in Sources */,
 				965895CB1B26D3D200D854FF /* Data1.swift in Sources */,
 				965895A21B21971A00D854FF /* ViewController.swift in Sources */,
 				965895C71B26BD1E00D854FF /* WebDetailViewController.swift in Sources */,
+				965249361C9FFBF00014D59F /* ADXML.swift in Sources */,
 				965895C51B21AA5400D854FF /* DetailViewController.swift in Sources */,
+				9652493B1C9FFBF00014D59F /* Utility.swift in Sources */,
+				965249351C9FFBF00014D59F /* AdManagerView.swift in Sources */,
 				965895A01B21971A00D854FF /* AppDelegate.swift in Sources */,
-				9651C2D71C76FEDB00DD9BFC /* MyAd.swift in Sources */,
+				965249391C9FFBF00014D59F /* MyAd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
