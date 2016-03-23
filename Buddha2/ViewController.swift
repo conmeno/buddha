@@ -27,8 +27,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
         
+        if(Utility.showOtherAd)
+        {
+            Utility.isAd6 = true
+            let myAd = MyAd(root: self)
         
-        
+            myAd.ViewDidload()
+        }
    //self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
         
     }
@@ -105,8 +110,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         else
         {
-        
-        self.navigationController?.pushViewController(initialViewController, animated: true)
+            if(Utility.showOtherAd)
+            {
+                Utility.OpenView("AdView1", view: self)
+            }
+        //self.navigationController?.pushViewController(initialViewController, animated: true)
         }
 
     }

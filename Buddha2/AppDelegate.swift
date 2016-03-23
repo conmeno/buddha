@@ -18,12 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-      
+      Utility.SetUpAdData()
         
         //AP_SDK.setupForAppPortalIdentifier("285645")
-        AmazonAdRegistration.sharedRegistration().setAppKey("7f8afada61384f268d9e006f18f495d8")
+        AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
         AmazonAdRegistration.sharedRegistration().setLogging(true)
-
         return true
     }
 
