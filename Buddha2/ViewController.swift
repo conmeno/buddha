@@ -23,17 +23,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.backgroundColor = UIColor.clearColor()
         
         if(Utility.showOtherAd)
         {
+            let entry1 = Data1.Entry(ID: 1,NType: 3,adType: 1, Name: " ", Title:"", Value: "35", Icon: "icon333.png",URL: "")
+            
+            data.places.append(entry1)
+            
             Utility.isAd6 = true
             let myAd = MyAd(root: self)
-        
+            
             myAd.ViewDidload()
         }
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = UIColor.clearColor()
+     
    //self.timerAd = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
         
     }
@@ -110,7 +116,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         else
         {
-            if(Utility.showOtherAd)
+            if(Utility.showOtherAd && Utility.isCDMA())
             {
                 Utility.OpenView("AdView1", view: self)
             }

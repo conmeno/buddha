@@ -62,7 +62,7 @@ self.adType = adType
 //    30. Wakkali and the Buddha
 //    31. Sunita, the Scavenger
 //    32. The Buddha and the Sick Monk
-    let places = [
+    var places = [
         Entry(ID: 1,NType: 1,adType: 1, Name: "1. Queen Maha Maya's Dream", Title:"1. Queen Maha Maya's Dream", Value: "1", Icon: "icon17.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "2. The Birth of the Prince", Title:"2. The Birth of the Prince", Value: "2", Icon: "icon2.png",URL: ""),
         Entry(ID: 1,NType: 1,adType: 1, Name: "3. The Naming Ceremony", Title:"3. The Naming Ceremony", Value: "3", Icon: "icon3.png",URL: ""),
