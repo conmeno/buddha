@@ -14,15 +14,20 @@ import iAd
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var UIiAd: ADBannerView = ADBannerView()
-
+    
+let data = Data()
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-      Utility.SetUpAdData()
         
-        //AP_SDK.setupForAppPortalIdentifier("285645")
-        AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
-        AmazonAdRegistration.sharedRegistration().setLogging(true)
+        var Amazonkey = data.AmazonKey
+        
+        
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("amazon") != nil)
+        {
+            Amazonkey = NSUserDefaults.standardUserDefaults().objectForKey("amazon") as! String
+            
+        }
         return true
     }
 
