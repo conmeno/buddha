@@ -16,9 +16,9 @@ class Data {
     let AdURL: String = "http://www.tony.somee.com/learning-buddha.txt"
     
     //google
-    let gBanner : String = ""
-    let gFull : String = ""
-    let TestDeviceID: String = ""
+    let gBanner : String = "ca-app-pub-3509766267653941/8009682311"
+    let gFull : String = "ca-app-pub-3509766267653941/9486415514"
+    let TestDeviceID: String = "eaf8210bc201e7313da4a24dc27c09ae"
     
 
     //chartboost

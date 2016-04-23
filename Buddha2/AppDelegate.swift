@@ -15,13 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var UIiAd: ADBannerView = ADBannerView()
-
+let data = Data()
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
       
+        var Amazonkey = data.AmazonKey
         
+        
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("amazon") != nil)
+        {
+            Amazonkey = NSUserDefaults.standardUserDefaults().objectForKey("amazon") as! String
+            
+        }
+
 //        AP_SDK.setupForAppPortalIdentifier("285645")
-        AmazonAdRegistration.sharedRegistration().setAppKey("ff0fa5c4c79f46d4ba358c35557b9ae6")
+        AmazonAdRegistration.sharedRegistration().setAppKey(Amazonkey)
         AmazonAdRegistration.sharedRegistration().setLogging(true)
 
         return true

@@ -141,10 +141,11 @@ class WebDetailViewController: UIViewController,GADBannerViewDelegate, GADInters
                 
                 loadAmazonFull()
                 showAmazonFull()
-            }else
-            {
-                amazonLocationY = self.view.bounds.height
             }
+//            else
+//            {
+//                amazonLocationY = self.view.bounds.height
+//            }
             
             
             

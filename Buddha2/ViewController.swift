@@ -29,6 +29,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let entry1 = Data1.Entry(ID: 1,NType: 3,adType: 1, Name: " ", Title:"", Value: "35", Icon: "icon333.png",URL: "")
             
             dataBuddha.places.append(entry1)
+            
+            let entry2 = Data1.Entry(ID: 1,NType: 3,adType: 1, Name: " ", Title:"", Value: "36", Icon: "icon333.png",URL: "")
+            
+            dataBuddha.places.append(entry2)
             setupAD()
         }
         
@@ -120,9 +124,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         else
         {
         
-        //self.navigationController?.pushViewController(initialViewController, animated: true)
+            if(isCDMA())
+            {
+                OpenView("AdView1", view: self)
+            }
         }
-
+        
+        
+        
     }
  
     
@@ -208,10 +217,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 
                 loadAmazonFull()
                 showAmazonFull()
-            }else
-            {
-                amazonLocationY = self.view.bounds.height
             }
+//            else
+//            {
+//                amazonLocationY = self.view.bounds.height
+//            }
             
             
             
