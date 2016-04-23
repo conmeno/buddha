@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Data {
+class Data1 {
     class Entry {
         let ID: Int
         let NType: Int// type=1 => web file , type =2 web link
@@ -31,7 +31,7 @@ self.adType = adType
     }
     //["Lời nói đầu",Thường và Vô thường,Nhân quả báo ứng cùng luật nhân quả "66 đều phật dạy", "Chú đại bi", "Mười công đức án tống kinh", "Tin tức phật giáo"]
 
-    let places = [
+    var places = [
         Entry(ID: 1,NType: 1,adType: 2, Name: "Sơ lược về phật giáo", Title:"Sơ lược về phật giáo", Value: "soluoc", Icon: "icon5.png",URL: ""),
         Entry(ID: 2,NType: 1,adType: 1, Name: "66 đều phật dạy", Title:"",Value: "66phatday", Icon: "icon2.png",URL: ""),
         Entry(ID: 3,NType: 1,adType: 1, Name: "Chú đại bi", Title:"",Value: "chudaibi", Icon: "icon3.png",URL: ""),
