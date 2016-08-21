@@ -28,6 +28,7 @@ let data = Data()
             Amazonkey = NSUserDefaults.standardUserDefaults().objectForKey("amazon") as! String
             
         }
+        
         return true
     }
 
